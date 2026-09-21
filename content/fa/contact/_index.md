@@ -6,7 +6,7 @@ title: "تماس"
 
 ## ایمیل
 
-[anegari@pitp.ca](mailto:anegari@pitp.ca)
+[anegari@uwaterloo.ca](mailto:anegari@uwaterloo.ca)
 
 ## نمایه‌ها
 
@@ -18,5 +18,4 @@ title: "تماس"
 
 ## وابستگی سازمانی
 
-موسسه فیزیک نظری پریمیتر  
-واترلو، انتاریو، کانادا
+مؤسسه محاسبات کوانتومی، دانشگاه واترلو، انتاریو، کانادا

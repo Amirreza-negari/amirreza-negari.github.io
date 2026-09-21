@@ -1,9 +1,9 @@
 {{- if .IsHome }}
 {{- $isFa := eq .Lang "fa" }}
 {{- $imageURL := "/images/profile/amirreza-negari-profile-photo.jpg" | absURL }}
-{{- $imageAlt := cond $isFa "امیررضا نگاری، فیزیک‌دان نظری و دانشجوی دکتری در موسسه فیزیک نظری پریمیتر" "Amirreza Negari, theoretical physicist and PhD student at Perimeter Institute" }}
+{{- $imageAlt := cond $isFa "امیررضا نگاری، فیزیک‌دان نظری و پژوهشگر پسادکتری در مؤسسه محاسبات کوانتومی دانشگاه واترلو" "Amirreza Negari, theoretical physicist and postdoctoral fellow at the Institute for Quantum Computing" }}
 {{- $siteName := cond $isFa "امیررضا نگاری" "Amirreza Negari" }}
-{{- $description := cond $isFa "امیررضا نگاری فیزیک‌دان نظری و دانشجوی دکتری در موسسه فیزیک نظری پریمیتر است و روی اطلاعات کوانتومی، ماده کوانتومی، تصحیح خطای کوانتومی و نظریه درهم‌تنیدگی پژوهش می‌کند." "Amirreza Negari is a theoretical physicist and PhD student at Perimeter Institute working on quantum information, quantum matter, quantum error correction, entanglement, and numerical methods." }}
+{{- $description := cond $isFa "امیررضا نگاری فیزیک‌دان نظری و پژوهشگر پسادکتری در مؤسسه محاسبات کوانتومی دانشگاه واترلو و گروه برهم‌کنش‌های کوانتومی کریستین موشیک است." "Amirreza Negari is a theoretical physicist and postdoctoral fellow at the Institute for Quantum Computing in the Quantum Interactions Theory Group led by Christine Muschik." }}
 <meta property="og:image:alt" content="{{ $imageAlt }}">
 <meta name="twitter:image:alt" content="{{ $imageAlt }}">
 <link rel="me" href="https://scholar.google.com/citations?user=_kyHGUcAAAAJ&amp;hl=en">
@@ -38,11 +38,11 @@
     "alternateName": ["Amirreza Negari", "Amir-Reza Negari", "امیررضا نگاری", "امیر رضا نگاری"],
     "description": {{ $description }},
     "image": {{ $imageURL }},
-    "jobTitle": {{ cond $isFa "دانشجوی دکتری فیزیک نظری" "PhD student in theoretical physics" }},
+    "jobTitle": {{ cond $isFa "پژوهشگر پسادکتری فیزیک نظری" "Postdoctoral fellow in theoretical physics" }},
     "affiliation": {
       "@type": "Organization",
-      "name": {{ cond $isFa "موسسه فیزیک نظری پریمیتر" "Perimeter Institute for Theoretical Physics" }},
-      "url": "https://perimeterinstitute.ca/"
+      "name": {{ cond $isFa "مؤسسه محاسبات کوانتومی دانشگاه واترلو" "Institute for Quantum Computing" }},
+      "url": "https://uwaterloo.ca/institute-for-quantum-computing/"
     },
     "knowsAbout": {{ if $isFa }}["اطلاعات کوانتومی", "ماده کوانتومی", "تصحیح خطای کوانتومی", "نظریه درهم‌تنیدگی", "سامانه‌های کوانتومی بس‌ذره‌ای"]{{ else }}["quantum information", "quantum matter", "quantum error correction", "entanglement theory", "quantum many-body systems", "numerical methods"]{{ end }},
     "sameAs": [

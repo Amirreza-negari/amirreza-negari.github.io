@@ -11,7 +11,8 @@
         <h1>امیررضا نگاری</h1>
 
         <p class="hero-subtitle">
-          من دانشجوی دکتری در موسسه فیزیک نظری پریمیتر هستم و در مرز میان
+          من پژوهشگر پسادکتری در مؤسسه محاسبات کوانتومی دانشگاه واترلو و عضو گروه
+          برهم‌کنش‌های کوانتومی به سرپرستی کریستین موشیک هستم. در مرز میان
           اطلاعات کوانتومی، ماده کوانتومی و تصحیح خطای کوانتومی پژوهش می‌کنم.
         </p>
 
@@ -27,8 +28,8 @@
       <h1>Amirreza Negari</h1>
 
       <p class="hero-subtitle">
-        I am a PhD student working at the interface of quantum information,
-        quantum matter and error correction.
+        I am a postdoctoral fellow at the Institute for Quantum Computing, working in
+        the Quantum Interactions Theory Group led by Christine Muschik.
       </p>
 
       <p class="hero-description">
@@ -45,7 +46,7 @@
     </div>
 
     <div class="hero-links">
-      <a href="mailto:anegari@pitp.ca">{{ if $isFa }}ایمیل{{ else }}Email{{ end }}</a>
+      <a href="mailto:anegari@uwaterloo.ca">{{ if $isFa }}ایمیل{{ else }}Email{{ end }}</a>
       <span>·</span>
       <a href="https://github.com/Amirreza-negari">{{ if $isFa }}گیتهاب{{ else }}GitHub{{ end }}</a>
       <span>·</span>
@@ -58,9 +59,9 @@
   </div>
 
   <div class="hero-card">
-    <img class="profile-photo" src="/images/profile/amirreza-negari-profile-photo.jpg" alt="{{ if $isFa }}امیررضا نگاری، فیزیک‌دان نظری و دانشجوی دکتری در موسسه فیزیک نظری پریمیتر{{ else }}Amirreza Negari, theoretical physicist and PhD student at Perimeter Institute{{ end }}">
+    <img class="profile-photo" src="/images/profile/amirreza-negari-profile-photo.jpg" alt="{{ if $isFa }}امیررضا نگاری، فیزیک‌دان نظری و پژوهشگر پسادکتری در مؤسسه محاسبات کوانتومی دانشگاه واترلو{{ else }}Amirreza Negari, theoretical physicist and postdoctoral fellow at the Institute for Quantum Computing{{ end }}">
     <p>
-      {{ if $isFa }}دانشجوی دکتری در موسسه فیزیک نظری پریمیتر.{{ else }}PhD student at Perimeter Institute for Theoretical Physics.{{ end }}
+      {{ if $isFa }}پژوهشگر پسادکتری در مؤسسه محاسبات کوانتومی دانشگاه واترلو.{{ else }}Postdoctoral fellow at the Institute for Quantum Computing.{{ end }}
     </p>
   </div>
 </section>
@@ -248,38 +249,43 @@
         <p>
           {{ if $isFa }}
             مسیر من در فیزیک از المپیاد فیزیک در دبیرستان شروع شد، در دانشگاه صنعتی شریف
-            ادامه پیدا کرد، از راه برنامه PSI به پریمیتر رسید، و حالا در همان‌جا به‌عنوان
-            دانشجوی دکتری ادامه دارد.
+            ادامه پیدا کرد، از راه برنامه PSI به پریمیتر رسید و پس از پایان دکتری، با یک دوره
+            پسادکتری در گروه برهم‌کنش‌های کوانتومی به مؤسسه محاسبات کوانتومی رسید.
           {{ else }}
             I started physics through the Physics Olympiad in high school, continued at Sharif
-            University of Technology, came to Perimeter through the PSI master's program, and now
-            continue there as a PhD student.
+            University of Technology, came to Perimeter through the PSI master’s program, completed
+            my PhD there, and then joined the Quantum Interactions Theory Group at IQC as a postdoc.
           {{ end }}
         </p>
       </div>
 
-      <div class="path-figure" aria-label="{{ if $isFa }}مسیر دانشگاهی از المپیاد فیزیک تا شریف، PSI و دکتری در پریمیتر{{ else }}Academic path from Physics Olympiad to Sharif, PSI, and PhD at Perimeter{{ end }}">
-        <svg viewBox="0 0 520 150" role="img">
-          <path class="path-line" d="M58 76h404"></path>
+      <div class="path-figure" aria-label="{{ if $isFa }}مسیر دانشگاهی از المپیاد فیزیک تا شریف، PSI، دکتری در پریمیتر و پسادکتری در مؤسسه محاسبات کوانتومی{{ else }}Academic path from Physics Olympiad to Sharif, PSI, a PhD at Perimeter, and a postdoc at IQC{{ end }}">
+        <svg viewBox="0 0 650 150" role="img">
+          <path class="path-line" d="M48 76h554"></path>
           <g class="path-stop">
-            <circle cx="58" cy="76" r="13"></circle>
-            <text x="58" y="44">{{ if $isFa }}المپیاد{{ else }}Olympiad{{ end }}</text>
-            <text class="path-detail" x="58" y="116">{{ if $isFa }}دبیرستان{{ else }}high school{{ end }}</text>
+            <circle cx="48" cy="76" r="13"></circle>
+            <text x="48" y="44">{{ if $isFa }}المپیاد{{ else }}Olympiad{{ end }}</text>
+            <text class="path-detail" x="48" y="116">{{ if $isFa }}دبیرستان{{ else }}high school{{ end }}</text>
           </g>
           <g class="path-stop">
-            <circle cx="194" cy="76" r="13"></circle>
-            <text x="194" y="44">{{ if $isFa }}شریف{{ else }}Sharif{{ end }}</text>
-            <text class="path-detail" x="194" y="116">{{ if $isFa }}کارشناسی فیزیک{{ else }}BSc physics{{ end }}</text>
+            <circle cx="186" cy="76" r="13"></circle>
+            <text x="186" y="44">{{ if $isFa }}شریف{{ else }}Sharif{{ end }}</text>
+            <text class="path-detail" x="186" y="116">{{ if $isFa }}کارشناسی فیزیک{{ else }}BSc physics{{ end }}</text>
           </g>
           <g class="path-stop">
-            <circle cx="326" cy="76" r="13"></circle>
-            <text x="326" y="44">PSI</text>
-            <text class="path-detail" x="326" y="116">{{ if $isFa }}کارشناسی ارشد{{ else }}MSc at PI{{ end }}</text>
+            <circle cx="324" cy="76" r="13"></circle>
+            <text x="324" y="44">PSI</text>
+            <text class="path-detail" x="324" y="116">{{ if $isFa }}کارشناسی ارشد{{ else }}MSc at PI{{ end }}</text>
           </g>
           <g class="path-stop">
             <circle cx="462" cy="76" r="13"></circle>
             <text x="462" y="44">{{ if $isFa }}پریمیتر{{ else }}Perimeter{{ end }}</text>
             <text class="path-detail" x="462" y="116">{{ if $isFa }}دکتری{{ else }}PhD{{ end }}</text>
+          </g>
+          <g class="path-stop">
+            <circle cx="602" cy="76" r="13"></circle>
+            <text x="602" y="44">IQC</text>
+            <text class="path-detail" x="602" y="116">{{ if $isFa }}پسادکتری{{ else }}Postdoc{{ end }}</text>
           </g>
         </svg>
       </div>
@@ -331,41 +337,41 @@
     <article class="home-paper-card">
       <span class="home-paper-number">01</span>
       <span class="home-paper-meta">{{ if $isFa }}پیش‌چاپ · ۲۰۲۶{{ else }}Preprint · 2026{{ end }}</span>
+      <h3>Rényi Entanglement of Purification Is Non-additive</h3>
+      <p>
+        {{ if $isFa }}با Zahra Baghali Khanian.{{ else }}With Zahra Baghali Khanian.{{ end }}
+      </p>
+      <a href="https://arxiv.org/abs/2608.28897">arXiv</a>
+    </article>
+
+    <article class="home-paper-card">
+      <span class="home-paper-number">02</span>
+      <span class="home-paper-meta">Physical Review Letters · 2026</span>
+      <h3>Extendibility of Fermionic Gaussian States</h3>
+      <p>
+        {{ if $isFa }}با Farzin Salek.{{ else }}With Farzin Salek.{{ end }}
+      </p>
+      <a href="https://doi.org/10.1103/65dd-448y">Journal</a>
+    </article>
+
+    <article class="home-paper-card">
+      <span class="home-paper-number">03</span>
+      <span class="home-paper-meta">Physical Review A · 2026</span>
+      <h3>Symmetry enforcing entanglement at high temperatures</h3>
+      <p>
+        {{ if $isFa }}با Leonardo A. Lessa و Subhayan Sahu.{{ else }}With Leonardo A. Lessa and Subhayan Sahu.{{ end }}
+      </p>
+      <a href="https://doi.org/10.1103/rckt-3lfm">Journal</a>
+    </article>
+
+    <article class="home-paper-card">
+      <span class="home-paper-number">04</span>
+      <span class="home-paper-meta">{{ if $isFa }}پیش‌چاپ · ۲۰۲۶{{ else }}Preprint · 2026{{ end }}</span>
       <h3>Unlearnable phases of matter</h3>
       <p>
         {{ if $isFa }}با Tarun Advaith Kumar، Yijian Zou، Roger G. Melko و Timothy H. Hsieh.{{ else }}With Tarun Advaith Kumar, Yijian Zou, Roger G. Melko, and Timothy H. Hsieh.{{ end }}
       </p>
       <a href="https://arxiv.org/abs/2602.11262">arXiv</a>
-    </article>
-
-    <article class="home-paper-card">
-      <span class="home-paper-number">02</span>
-      <span class="home-paper-meta">{{ if $isFa }}پیش‌چاپ · ۲۰۲۶{{ else }}Preprint · 2026{{ end }}</span>
-      <h3>Critical non-equilibrium phases from noisy topological memories</h3>
-      <p>
-        {{ if $isFa }}با Subhayan Sahu، Jan Behrends، Benjamin Béri و Timothy H. Hsieh.{{ else }}With Subhayan Sahu, Jan Behrends, Benjamin Béri, and Timothy H. Hsieh.{{ end }}
-      </p>
-      <a href="https://arxiv.org/abs/2601.10792">arXiv</a>
-    </article>
-
-    <article class="home-paper-card">
-      <span class="home-paper-number">03</span>
-      <span class="home-paper-meta">{{ if $isFa }}پیش‌چاپ · ۲۰۲۵{{ else }}Preprint · 2025{{ end }}</span>
-      <h3>Symmetry enforces entanglement at high temperatures</h3>
-      <p>
-        {{ if $isFa }}با Leonardo A. Lessa و Subhayan Sahu.{{ else }}With Leonardo A. Lessa and Subhayan Sahu.{{ end }}
-      </p>
-      <a href="https://arxiv.org/abs/2508.20166">arXiv</a>
-    </article>
-
-    <article class="home-paper-card">
-      <span class="home-paper-number">04</span>
-      <span class="home-paper-meta">{{ if $isFa }}پیش‌چاپ · ۲۰۲۵{{ else }}Preprint · 2025{{ end }}</span>
-      <h3>Extendibility of fermionic Gaussian states</h3>
-      <p>
-        {{ if $isFa }}با Farzin Salek.{{ else }}With Farzin Salek.{{ end }}
-      </p>
-      <a href="https://arxiv.org/abs/2508.18532">arXiv</a>
     </article>
   </div>
 
@@ -392,7 +398,7 @@
     </p>
   </div>
 
-  <a href="mailto:anegari@pitp.ca">anegari@pitp.ca</a>
+  <a href="mailto:anegari@uwaterloo.ca">anegari@uwaterloo.ca</a>
 </section>
 
 {{ end }}

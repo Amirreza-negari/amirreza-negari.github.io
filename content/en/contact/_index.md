@@ -6,7 +6,7 @@ For research discussions, email is the best way to reach me.
 
 ## Email
 
-[anegari@pitp.ca](mailto:anegari@pitp.ca)
+[anegari@uwaterloo.ca](mailto:anegari@uwaterloo.ca)
 
 ## Profiles
 
@@ -18,5 +18,4 @@ For research discussions, email is the best way to reach me.
 
 ## Affiliation
 
-Perimeter Institute for Theoretical Physics  
-Waterloo, Ontario, Canada
+Institute for Quantum Computing, University of Waterloo, Ontario, Canada

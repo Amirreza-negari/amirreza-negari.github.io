@@ -5,11 +5,11 @@
   "@type": "{{- ( site.Params.schema.publisherType | default "Organization") | title -}}",
   "name": {{ .Title | default site.Title }},
   "alternateName": ["Amir-Reza Negari", "امیررضا نگاری", "امیر رضا نگاری"],
-  "jobTitle": {{ cond (eq .Lang "fa") "دانشجوی دکتری فیزیک نظری" "PhD student in theoretical physics" }},
+  "jobTitle": {{ cond (eq .Lang "fa") "پژوهشگر پسادکتری فیزیک نظری" "Postdoctoral fellow in theoretical physics" }},
   "affiliation": {
     "@type": "Organization",
-    "name": {{ cond (eq .Lang "fa") "موسسه فیزیک نظری پریمیتر" "Perimeter Institute for Theoretical Physics" }},
-    "url": "https://perimeterinstitute.ca/"
+    "name": {{ cond (eq .Lang "fa") "مؤسسه محاسبات کوانتومی دانشگاه واترلو" "Institute for Quantum Computing" }},
+    "url": "https://uwaterloo.ca/institute-for-quantum-computing/"
   },
   "url": {{ site.Home.Permalink }},
   "description": {{ with .Description }}{{ . | plainify | truncate 180 | safeHTML }}{{ else }}{{ site.Params.description | plainify | truncate 180 | safeHTML }}{{ end }},

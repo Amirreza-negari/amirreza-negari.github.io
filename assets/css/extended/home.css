@@ -220,7 +220,7 @@ html[lang="fa"] .profile-photo {
 
 .paper-card h3,
 .theme-card h3 {
-  margin-top: 0;
+  margin-top: 6.4rem;
   margin-bottom: 0.45rem;
   font-size: 1.22rem;
   line-height: 1.25;
@@ -1445,7 +1445,7 @@ html[lang="fa"] .post-content blockquote p:last-child {
 
 .cv-timeline {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0.8rem;
 }
 
