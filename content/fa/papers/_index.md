@@ -6,6 +6,38 @@ A selected list of papers and preprints.
 
 ## Publications
 
+### Instability of Markov chains under infinitesimal coherent dissipation
+
+**Authors:** **Amir-Reza Negari**, Yijian Zou, Timothy H. Hsieh
+
+**Year:** 2026
+
+**Links:** [arXiv](https://arxiv.org/abs/2610.18983)
+
+### Nonadditivity in fermionic quantum Shannon theory
+
+**Authors:** Farzin Salek, **Amir-Reza Negari**, Graeme Smith, Jens Eisert, Debbie Leung
+
+**Year:** 2026
+
+**Links:** [arXiv](https://arxiv.org/abs/2610.06758)
+
+### Entanglement of purification for Werner states: canonical purification and nonadditivity
+
+**Authors:** Zahra Baghali Khanian, **Amir-Reza Negari**
+
+**Year:** 2026
+
+**Links:** [arXiv](https://arxiv.org/abs/2610.03630)
+
+### Approximation theorems for fermionic Gaussian states
+
+**Authors:** **Amir-Reza Negari**, Farzin Salek, Zoltán Zimborás, Aram Harrow, Patrick Hayden, Jens Eisert
+
+**Year:** 2026
+
+**Links:** [arXiv](https://arxiv.org/abs/2610.01860)
+
 ### Rényi Entanglement of Purification Is Non-additive
 
 **Authors:** **Amir-Reza Negari**, Zahra Baghali Khanian

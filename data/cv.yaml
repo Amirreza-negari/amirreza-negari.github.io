@@ -1,0 +1,195 @@
+# Biographical details and skills: Amir-Reza_Negari_CV (2).pdf, supplied October 2026.
+# Selected publication details follow the supplied CV.
+download: /files/Amir-Reza_Negari_CV.pdf
+name:
+  en: Amir-Reza Negari
+  fa: امیررضا نگاری
+role:
+  en: Postdoctoral Fellow
+  fa: پژوهشگر پسادکتری
+institution:
+  en: Institute for Quantum Computing, University of Waterloo
+  fa: مؤسسه‌ی محاسبات کوانتومی، دانشگاه واترلو
+location:
+  en: Waterloo, Ontario, Canada
+  fa: واترلو، انتاریو، کانادا
+focus:
+  en: I study quantum information, quantum error correction, and statistical physics using analytical theory and numerical methods.
+  fa: با روش‌های تحلیلی و عددی، در زمینه‌های اطلاعات کوانتومی، تصحیح خطای کوانتومی و فیزیک آماری پژوهش می‌کنم.
+skills:
+  - title:
+      en: Python
+      fa: پایتون
+    items: [JAX, PyTorch, CuPy, Numba CUDA]
+  - title:
+      en: Programming
+      fa: برنامه‌نویسی
+    items: [C/C++, CUDA, Julia, MATLAB]
+  - title:
+      en: Computing
+      fa: محاسبات
+    items:
+      - en: GPU/CPU parallel programming
+        fa: برنامه‌نویسی موازی GPU/CPU
+      - en: Distributed computing
+        fa: محاسبات توزیع‌شده
+      - Slurm
+      - HPC
+  - title:
+      en: Methods
+      fa: روش‌ها
+    items:
+      - en: Determinantal quantum Monte Carlo
+        fa: مونت‌کارلوی کوانتومی دترمینانی
+      - en: Tensor networks (DMRG/MPS)
+        fa: شبکه‌های تانسوری (DMRG/MPS)
+      - en: Gaussian methods
+        fa: روش‌های گاوسی
+      - en: Stabilizer simulation
+        fa: شبیه‌سازی پایدارسازها
+      - en: QEC decoders
+        fa: رمزگشاهای تصحیح خطای کوانتومی
+publications:
+  - title: Extendibility of Fermionic Gaussian States
+    url: https://arxiv.org/abs/2508.18532
+    note:
+      en: Physical Review Letters 137, 080201 · 2026
+      fa: Physical Review Letters 137, 080201 · ۲۰۲۶
+  - title: "Spacetime Markov length: A diagnostic for fault tolerance via mixed-state phases"
+    url: https://arxiv.org/abs/2412.00193
+    note:
+      en: Physical Review B 114, 045130 · 2026
+      fa: Physical Review B 114, 045130 · ۲۰۲۶
+  - title: "Amelioration for the Sign Problem: An Adiabatic Quantum Monte Carlo Algorithm"
+    url: https://doi.org/10.1103/PhysRevLett.127.217003
+    note:
+      en: Physical Review Letters 127, 217003 · 2021
+      fa: Physical Review Letters 127, 217003 · ۲۰۲۱
+career:
+  - dates:
+      en: 2026–present
+      fa: ۲۰۲۶–اکنون
+    title:
+      en: Postdoctoral Fellow
+      fa: پژوهشگر پسادکتری
+    institution:
+      en: Institute for Quantum Computing, University of Waterloo
+      fa: مؤسسه‌ی محاسبات کوانتومی، دانشگاه واترلو
+    details:
+      - en: Quantum Interactions Theory Group
+        fa: گروه برهم‌کنش‌های کوانتومی
+  - dates:
+      en: 2022–2026
+      fa: ۲۰۲۲–۲۰۲۶
+    title:
+      en: Ph.D. in Physics
+      fa: دکتری فیزیک
+    institution:
+      en: Perimeter Institute for Theoretical Physics
+      fa: مؤسسه‌ی فیزیک نظری پریمیتر
+    details:
+      - en: "Supervisor: Timothy H. Hsieh"
+        fa: "استاد راهنما: تیموتی هسیه"
+      - en: "Thesis: Phases of matter in quantum information and error correction."
+        fa: "رساله: فازهای ماده در اطلاعات کوانتومی و تصحیح خطا."
+  - dates:
+      en: 2021–2022
+      fa: ۲۰۲۱–۲۰۲۲
+    title:
+      en: M.Sc. in Physics
+      fa: کارشناسی ارشد فیزیک
+    institution:
+      en: Perimeter Institute for Theoretical Physics
+      fa: مؤسسه‌ی فیزیک نظری پریمیتر
+    details:
+      - en: Perimeter Scholars International (PSI)
+        fa: برنامه‌ی بین‌المللی پژوهشگران پریمیتر (PSI)
+  - dates:
+      en: 2016–2021
+      fa: ۲۰۱۶–۲۰۲۱
+    title:
+      en: B.Sc.
+      fa: کارشناسی
+    institution:
+      en: Sharif University of Technology
+      fa: دانشگاه صنعتی شریف
+    details: []
+awards:
+  - title:
+      en: Bronze Medal · International Physics Olympiad
+      fa: مدال برنز · المپیاد جهانی فیزیک
+    detail:
+      en: Zurich, Switzerland · 2016
+      fa: زوریخ، سوئیس · ۲۰۱۶
+    medal: bronze
+  - title:
+      en: Gold Medal · Iran’s National Physics Olympiad
+      fa: مدال طلا · المپیاد فیزیک ایران
+    detail:
+      en: 2015
+      fa: ۲۰۱۵
+    medal: gold
+fellowships:
+  - en: Institute for Quantum Computing fellowship
+    fa: فلوشیپ مؤسسه‌ی محاسبات کوانتومی
+  - en: University of Waterloo international student scholarship and Perimeter Residence Scholarship · 2022–2026
+    fa: بورسیه‌ی دانشجویان بین‌المللی دانشگاه واترلو و بورسیه‌ی اقامت پریمیتر · ۲۰۲۲–۲۰۲۶
+  - en: Perimeter International Scholarship · 2021–2022
+    fa: بورسیه‌ی بین‌المللی پریمیتر · ۲۰۲۱–۲۰۲۲
+community:
+  - title:
+      en: Mentoring
+      fa: راهنمایی پژوهشی
+    body:
+      en: Mentored a Perimeter Scholars International student (2023–2025) and supervised a high-school research group through Perimeter’s ISSYP program.
+      fa: راهنمایی یک دانشجوی برنامه‌ی PSI در سال‌های ۲۰۲۳–۲۰۲۵ و سرپرستی یک گروه پژوهشی دانش‌آموزی در برنامه‌ی ISSYP پریمیتر.
+  - title:
+      en: Research community
+      fa: جامعه‌ی پژوهشی
+    body:
+      en: Founded the Eureka Club and a biweekly Quantum Matter arXiv lunch; co-founded the Topological Quantum Club at Perimeter.
+      fa: بنیان‌گذاری باشگاه Eureka و نشست ناهار arXiv گروه ماده‌ی کوانتومی هر دو هفته یک‌بار؛ هم‌بنیان‌گذاری باشگاه کوانتوم توپولوژیک در پریمیتر.
+  - title:
+      en: Peer review
+      fa: داوری علمی
+    body:
+      en: Reviewer for QIP 2026, Physical Review B, and PRX Quantum.
+      fa: داور کنفرانس QIP ۲۰۲۶ و مجله‌های Physical Review B و PRX Quantum.
+  - title:
+      en: Teaching & outreach
+      fa: آموزش و ترویج علم
+    body:
+      en: Graduate and undergraduate physics teaching assistantships (2018–2022), plus Physics Olympiad instruction and outreach (2015–2019).
+      fa: دستیاری آموزش فیزیک در دوره‌های کارشناسی و تحصیلات تکمیلی (۲۰۱۸–۲۰۲۲)، و آموزش و ترویج المپیاد فیزیک (۲۰۱۵–۲۰۱۹).
+talks:
+  - title: "Critical Mixed-State Phases from Coherent Errors: CMI, Loop Constraints, and Network Conductance"
+    detail:
+      en: Talk · University of Cologne, online · 2025
+      fa: سخنرانی · دانشگاه کلن، آنلاین · ۲۰۲۵
+  - title: Extendibility of Fermionic Gaussian States
+    url: https://events.perimeterinstitute.ca/event/1107/contributions/2011/
+    detail:
+      en: Contributed talk · Year of Quantum Across Canada, IQC · 2025
+      fa: سخنرانی پذیرفته‌شده · Year of Quantum Across Canada، مؤسسه‌ی محاسبات کوانتومی · ۲۰۲۵
+  - title: Fault tolerance via mixed-state phases
+    url: https://pirsa.org/25020056
+    detail:
+      en: Recorded talk · Perimeter Institute · 2025
+      fa: سخنرانی ضبط‌شده · مؤسسه‌ی پریمیتر · ۲۰۲۵
+  - title: Mixed-state quantum criticality
+    detail:
+      en: Poster · QUDYN25, Max Planck Institute · 2025
+      fa: پوستر · QUDYN25، مؤسسه‌ی ماکس پلانک · ۲۰۲۵
+  - title: Measurement-induced phase transitions in the toric code
+    url: https://pirsa.org/23050143
+    detail:
+      en: Recorded talk · Perimeter Institute · 2023
+      fa: سخنرانی ضبط‌شده · مؤسسه‌ی پریمیتر · ۲۰۲۳
+  - title: Classical simulability of MBQC and measurement-induced transitions in the toric code
+    detail:
+      en: Invited talk · University of British Columbia · 2023
+      fa: سخنرانی دعوت‌شده · دانشگاه بریتیش کلمبیا · ۲۰۲۳
+  - title: Measurement-induced phase transitions in the toric code
+    detail:
+      en: Poster · Boulder Summer School · 2023
+      fa: پوستر · مدرسه‌ی تابستانی بولدر · ۲۰۲۳

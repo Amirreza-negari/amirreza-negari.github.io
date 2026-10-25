@@ -1,191 +1,133 @@
 {{- define "main" }}
+{{- $lang := .Lang }}
+{{- $isFa := eq $lang "fa" }}
+{{- $cv := hugo.Data.cv }}
+{{- $papersURL := cond $isFa "/fa/papers/" "/papers/" }}
+{{- $researchURL := cond $isFa "/fa/research/" "/research/" }}
 
-<section class="cv-page">
+<article class="cv-page">
   <header class="page-header cv-header">
     {{- partial "breadcrumbs.html" . }}
-    <p class="eyebrow">Curriculum Vitae</p>
-    <h1>Amir-Reza Negari</h1>
-    <div class="post-description">
-      Postdoctoral fellow at the Institute for Quantum Computing in the Quantum Interactions Theory Group led by Christine Muschik.
+    <div class="cv-masthead">
+      <div class="cv-identity">
+        <h1>{{ index $cv.name $lang }}</h1>
+        <p class="cv-role">{{ index $cv.role $lang }}</p>
+        <p class="cv-institution">{{ index $cv.institution $lang }}</p>
+        <p class="cv-focus">{{ index $cv.focus $lang }}</p>
+      </div>
+      <a class="cv-download" href="{{ $cv.download }}" download="Amir-Reza_Negari_CV.pdf" type="application/pdf">{{ if $isFa }}دریافت رزومه · PDF انگلیسی{{ else }}Download CV · PDF{{ end }}</a>
     </div>
-    <div class="cv-actions">
-      <a href="mailto:anegari@uwaterloo.ca">anegari@uwaterloo.ca</a>
-      <a href="https://uwaterloo.ca/institute-for-quantum-computing/research/groups/quantum-interactions-theory-group">Quantum Interactions group</a>
-      <a href="/papers/">Papers</a>
+    <div class="cv-contact">
+      <a href="mailto:anegari@uwaterloo.ca"><bdi>anegari@uwaterloo.ca</bdi></a>
+      <a href="https://scholar.google.com/citations?user=_kyHGUcAAAAJ&amp;hl=en">{{ if $isFa }}گوگل اسکالر{{ else }}Google Scholar{{ end }}</a>
+      <span class="cv-location">{{ index $cv.location $lang }}</span>
     </div>
   </header>
 
-  <div class="cv-overview">
-    <article>
-      <span>Current</span>
-      <strong>Postdoctoral fellow</strong>
-      <p>Institute for Quantum Computing</p>
-    </article>
-    <article>
-      <span>Location</span>
-      <strong>Waterloo, Canada</strong>
-      <p>University of Waterloo</p>
-    </article>
-    <article>
-      <span>Focus</span>
-      <strong>Quantum information</strong>
-      <p>Quantum matter and error correction</p>
-    </article>
-  </div>
+  <section class="cv-section" id="cv-experience" aria-labelledby="cv-experience-title">
+    <h2 id="cv-experience-title">{{ if $isFa }}سوابق و تحصیلات{{ else }}Experience & education{{ end }}</h2>
+    <div class="cv-section-body cv-timeline">
+      {{- range $cv.career }}
+      <article class="cv-entry">
+        <span class="cv-date">{{ index .dates $lang }}</span>
+        <div>
+          <h3>{{ index .title $lang }}</h3>
+          <p class="cv-institution">{{ index .institution $lang }}</p>
+          {{- range .details }}<p class="cv-detail">{{ index . $lang }}</p>{{ end }}
+        </div>
+      </article>
+      {{- end }}
+    </div>
+  </section>
 
-  <div class="cv-layout">
-    <section class="cv-section cv-span">
-      <div class="cv-section-title">
-        <p class="eyebrow">Career</p>
-        <h2>Appointments and Education</h2>
-      </div>
-      <div class="cv-timeline">
-        <article>
-          <span>2026 -- Present</span>
-          <h3>Postdoctoral Fellow</h3>
-          <p>Institute for Quantum Computing</p>
-          <small>Quantum Interactions Theory Group; supervisor: Christine Muschik</small>
-        </article>
-        <article>
-          <span>2022 -- 2026</span>
-          <h3>Ph.D.</h3>
-          <p>Perimeter Institute</p>
-          <small>Advisor: Timothy H. Hsieh</small>
-        </article>
-        <article>
-          <span>2021 -- 2022</span>
-          <h3>M.Sc.</h3>
-          <p>Perimeter Institute</p>
-          <small>Advisor: Timothy H. Hsieh</small>
-        </article>
-        <article>
-          <span>2016 -- 2021</span>
-          <h3>B.Sc.</h3>
-          <p>Sharif University of Technology</p>
-          <small>Advisor: Abolhassan Vaezi</small>
-        </article>
-      </div>
-    </section>
+  <section class="cv-section" id="cv-skills" aria-labelledby="cv-skills-title">
+    <h2 id="cv-skills-title">{{ if $isFa }}مهارت‌های فنی{{ else }}Technical skills{{ end }}</h2>
+    <div class="cv-section-body">
+      <dl class="cv-skill-rows">
+        {{- range $cv.skills }}
+        <div class="cv-skill-row">
+          <dt>{{ index .title $lang }}</dt>
+          <dd>{{ range $index, $skill := .items }}{{ if $index }}{{ if $isFa }}، {{ else }}, {{ end }}{{ end }}{{ if reflect.IsMap $skill }}{{ index $skill $lang }}{{ else }}<bdi>{{ $skill }}</bdi>{{ end }}{{ end }}</dd>
+        </div>
+        {{- end }}
+      </dl>
+    </div>
+  </section>
 
-    <section class="cv-section">
-      <div class="cv-section-title">
-        <p class="eyebrow">Recognition</p>
-        <h2>Honors and Awards</h2>
-      </div>
-      <h3>Scholarships</h3>
-      <ul>
-        <li>International student scholarship, University of Waterloo ($38,000 per year; 2022--2026)</li>
-        <li>Perimeter Residence Scholarship ($8,000 per year; 2022--2026)</li>
-        <li>Perimeter International Scholarship ($47,388; 2021--2022)</li>
-      </ul>
-      <h3>Competitions</h3>
-      <ul class="cv-medals">
-        <li class="bronze"><strong>Bronze Medal</strong>, International Physics Olympiad, Zurich, Switzerland, 2016</li>
-        <li class="gold"><strong>Gold Medal</strong>, Iran's National Physics Olympiad, 2015. This award included exemption from the final year of high school and Iran's national university entrance exam.</li>
-      </ul>
-    </section>
-
-    <section class="cv-section">
-      <div class="cv-section-title">
-        <p class="eyebrow">Speaking</p>
-        <h2>Presentations</h2>
-      </div>
-      <h3>Recorded talks</h3>
-      <ul>
+  <section class="cv-section" id="cv-publications" aria-labelledby="cv-publications-title">
+    <h2 id="cv-publications-title">{{ if $isFa }}مقاله‌های برگزیده{{ else }}Selected publications{{ end }}</h2>
+    <div class="cv-section-body">
+      <p class="cv-publication-summary">{{ if $isFa }}۶ مقاله‌ی داوری‌شده و ۷ پیش‌چاپ.{{ else }}Six peer-reviewed papers and seven preprints.{{ end }}</p>
+      <ol class="cv-publications">
+        {{- range $cv.publications }}
         <li>
-          <a href="https://pirsa.org/25020056">Fault tolerance via mixed-state phases</a>, Perimeter Institute
+          <a href="{{ .url }}" lang="en" dir="ltr">{{ .title }}</a>
+          <span class="cv-detail" dir="auto">{{ index .note $lang }}</span>
         </li>
+        {{- end }}
+      </ol>
+      <p class="cv-links">
+        <a href="{{ $papersURL }}">{{ if $isFa }}همه‌ی مقاله‌ها{{ else }}All publications{{ end }}</a>
+        <a href="{{ $researchURL }}">{{ if $isFa }}درباره‌ی پژوهش{{ else }}Research overview{{ end }}</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="cv-section" id="cv-awards" aria-labelledby="cv-awards-title">
+    <h2 id="cv-awards-title">{{ if $isFa }}جوایز و بورسیه‌ها{{ else }}Awards & fellowships{{ end }}</h2>
+    <div class="cv-section-body">
+      <ul class="cv-awards">
+        {{- range $cv.awards }}
+        <li><strong>{{ index .title $lang }}</strong><span class="cv-detail">{{ index .detail $lang }}</span></li>
+        {{- end }}
+      </ul>
+      <h3 class="cv-subheading">{{ if $isFa }}بورسیه‌ها{{ else }}Fellowships & scholarships{{ end }}</h3>
+      <ul class="cv-list">
+        {{- range $cv.fellowships }}<li>{{ index . $lang }}</li>{{ end }}
+      </ul>
+    </div>
+  </section>
+
+  <section class="cv-section" id="cv-service" aria-labelledby="cv-service-title">
+    <h2 id="cv-service-title">{{ if $isFa }}آموزش و خدمات علمی{{ else }}Teaching & service{{ end }}</h2>
+    <div class="cv-section-body">
+      <dl class="cv-community">
+        {{- range $cv.community }}
+        <div>
+          <dt>{{ index .title $lang }}</dt>
+          <dd>{{ index .body $lang }}</dd>
+        </div>
+        {{- end }}
+      </dl>
+    </div>
+  </section>
+
+  <section class="cv-section" id="cv-talks" aria-labelledby="cv-talks-title">
+    <h2 id="cv-talks-title">{{ if $isFa }}سخنرانی‌ها و ارائه‌ها{{ else }}Talks & presentations{{ end }}</h2>
+    <div class="cv-section-body">
+      <ul class="cv-talks">
+        {{- range first 3 $cv.talks }}
         <li>
-          <a href="https://pirsa.org/23050143">Measurement-induced phase transitions in the toric code</a>, Perimeter Institute
+          {{- if .url }}<a href="{{ .url }}" lang="en" dir="ltr">{{ .title }}</a>{{ else }}<span class="cv-talk-title" lang="en" dir="ltr">{{ .title }}</span>{{ end }}
+          <span class="cv-detail">{{ index .detail $lang }}</span>
         </li>
+        {{- end }}
       </ul>
-      <h3>Conference and seminar talks</h3>
-      <ul>
-        <li><a href="https://events.perimeterinstitute.ca/event/1107/contributions/2011/">Extendibility of Fermionic Gaussian States</a>, Year of Quantum Across Canada</li>
-        <li>Classical simulability of MBQC and measurement-induced transitions in the toric code, University of British Columbia</li>
-      </ul>
-      <h3>Posters and essays</h3>
-      <ul>
-        <li>Measurement-induced phase transitions in the toric code, Boulder Summer School 2023</li>
-        <li>Mixed-state quantum criticality, QUDYN25 at Max Planck Institute, 2025</li>
-        <li>Master's essay: Measurement-induced phase transitions</li>
-      </ul>
-    </section>
-
-    <section class="cv-section cv-span">
-      <div class="cv-section-title">
-        <p class="eyebrow">Community</p>
-        <h2>Teaching and Leadership</h2>
-      </div>
-      <div class="cv-card-grid">
-        <article>
-          <h3>Refereeing</h3>
-          <ul>
-            <li>Reviewer for QIP Conference, 2026</li>
-            <li>Referee for Physical Review B</li>
-          </ul>
-        </article>
-        <article>
-          <h3>Journal club organizing</h3>
-          <ul>
-            <li>Organized and founded the Eureka Club at Perimeter Institute</li>
-            <li>Organized and founded the Topological Quantum Club at Perimeter Institute</li>
-            <li>Organized and founded a biweekly arXiv lunch for the Quantum Matter group</li>
-          </ul>
-        </article>
-        <article>
-          <h3>Mentoring</h3>
-          <ul>
-            <li>Supervised a high-school research project, ISSYP Summer Program, Perimeter Institute</li>
-            <li>Mentored a PSI student, 2023--2025</li>
-          </ul>
-        </article>
-        <article>
-          <h3>Teaching assistant</h3>
-          <ul>
-            <li>Statistical Physics, M.Sc., Fall 2022</li>
-            <li>Quantum Mechanics I and II, Undergraduate, 2020--2021</li>
-            <li>Thermodynamics I and II, Undergraduate, 2019</li>
-            <li>Mathematical Physics I, Undergraduate, Spring 2018</li>
-          </ul>
-        </article>
-        <article>
-          <h3>Physics Olympiad instructor</h3>
-          <ul>
-            <li>Thermodynamics instructor for Iran Physics Olympiad training, Young Scholars Club, 2019</li>
-            <li>Mechanics and electrodynamics problem-solving instructor for high-school Physics Olympiad students, 2015--2018</li>
-            <li>Physics Olympiad lab tutor and instructor at Salam, Farzanegan, Tabatabaei, and Alborz high schools</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="cv-section cv-span">
-      <div class="cv-section-title">
-        <p class="eyebrow">Tools</p>
-        <h2>Numerical and Computational Skills</h2>
-      </div>
-      <div class="cv-skills">
-        <span>DMRG/MPS</span>
-        <span>Tensor networks</span>
-        <span>Quantum Monte Carlo</span>
-        <span>Clifford and stabilizer formalism</span>
-        <span>Fermionic and bosonic Gaussian formalism</span>
-        <span>QEC decoders</span>
-        <span>C/C++</span>
-        <span>CUDA</span>
-        <span>Julia</span>
-        <span>Python</span>
-        <span>JAX</span>
-        <span>CuPy</span>
-        <span>PyTorch</span>
-        <span>Numba CUDA</span>
-        <span>MATLAB</span>
-        <span>GPU/CPU parallel programming</span>
-        <span>Slurm/HPC</span>
-      </div>
-    </section>
-  </div>
-</section>
+      {{- if gt (len $cv.talks) 3 }}
+      <details class="cv-more-talks">
+        <summary>{{ if $isFa }}دیگر سخنرانی‌ها و پوسترها{{ else }}More talks and posters{{ end }} <span aria-hidden="true">({{ sub (len $cv.talks) 3 }})</span></summary>
+        <ul class="cv-talks">
+          {{- range after 3 $cv.talks }}
+          <li>
+            {{- if .url }}<a href="{{ .url }}" lang="en" dir="ltr">{{ .title }}</a>{{ else }}<span class="cv-talk-title" lang="en" dir="ltr">{{ .title }}</span>{{ end }}
+            <span class="cv-detail">{{ index .detail $lang }}</span>
+          </li>
+          {{- end }}
+        </ul>
+      </details>
+      {{- end }}
+    </div>
+  </section>
+</article>
 
 {{- end }}

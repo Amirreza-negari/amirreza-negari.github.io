@@ -5,9 +5,10 @@
   (dict
     "kicker" (cond $isFa "مسیر ۰۱" "Direction 01")
     "title" (cond $isFa "فازهای حالت آمیخته و حافظه‌های کوانتومی" "Mixed-state phases and quantum memories")
-    "summary" (cond $isFa "حافظه‌های توپولوژیک در حضور نویز را می‌توان به‌مثابه حالت‌های آمیخته‌ی بس‌ذره‌ای توصیف کرد؛ جایی که کمیت‌هایی مانند طول مارکوفی و اطلاعات شرطی، ساختارهایی را آشکار می‌کنند که از دید مشاهده‌پذیرهای موضعی پنهان می‌مانند." "I study noisy quantum memories as many-body mixed states. A recurring theme is that local observables can look short-ranged while information-theoretic quantities, such as conditional mutual information and Markov length, reveal hidden long-range structure relevant for fault tolerance.")
+    "summary" (cond $isFa "بررسی می‌کنم که نویز و دینامیک سامانه‌های باز چگونه بر حافظه‌های کوانتومی و فازهای حالت آمیخته اثر می‌گذارند. طول مارکوفی و اطلاعات متقابل شرطی، هم‌بستگی‌هایی فراتر از مشاهده‌پذیرهای موضعی را آشکار می‌کنند و ابزارهایی برای تشخیص تحمل خطا به دست می‌دهند. پژوهش اخیرم محدودیت‌های این ابزارها را نیز روشن می‌کند: اتلاف موضعی می‌تواند در زمانی دلخواه کوتاه، طول مارکوفی نامتناهی ایجاد کند، بی‌آن‌که این امر لزوماً به معنای آرامش کند به حالت پایا باشد." "I study how noise and open-system dynamics shape quantum memories and mixed-state phases. Markov length and conditional mutual information reveal correlations beyond local observables and provide diagnostics for fault tolerance. My recent work also probes their limits: local dissipation can generate infinite Markov length arbitrarily quickly, without necessarily implying slow relaxation to a steady state.")
     "figure" "memory"
     "papers" (slice
+      (dict "title" "Instability of Markov chains under infinitesimal coherent dissipation" "url" "https://arxiv.org/abs/2610.18983")
       (dict "title" "Critical non-equilibrium phases from noisy topological memories" "url" "https://arxiv.org/abs/2601.10792")
       (dict "title" "Spacetime Markov length: A diagnostic for fault tolerance via mixed-state phases" "url" "https://arxiv.org/abs/2412.00193")
       (dict "title" "Measurement-induced phase transitions in the toric code" "url" "https://arxiv.org/abs/2307.02292")
@@ -15,19 +16,20 @@
   )
   (dict
     "kicker" (cond $isFa "مسیر ۰۲" "Direction 02")
-    "title" (cond $isFa "نظریه‌ی درهم‌تنیدگی و تقارن" "Entanglement theory and symmetry")
-    "summary" (cond $isFa "در پژوهش‌های خود بررسی می‌کنم که چگونه تقارن، زوجیت فرمیونی و محدودیت‌های ابرگزینش بر ساختار درهم‌تنیدگی، تفکیک‌پذیری، و وظایف اطلاعات‌نظری اثر می‌گذارند." "I am interested in how symmetry and superselection constraints shape entanglement, separability, and information-processing tasks in many-body systems, especially in regimes where standard pure-state intuition is no longer enough.")
+    "title" (cond $isFa "درهم‌تنیدگی و اطلاعات کوانتومی" "Entanglement and quantum information")
+    "summary" (cond $isFa "بررسی می‌کنم که تقارن و محدودیت زوجیت فرمیونی چگونه بر درهم‌تنیدگی و انتقال اطلاعات اثر می‌گذارند. کارهای اخیرم ناجمع‌پذیریِ درهم‌تنیدگی پالایش را برای حالت‌های ورنر و نیز برای نسخه‌ی رنیِ این کمیت نشان می‌دهند. در نظریه‌ی شانون کوانتومی فرمیونی، آماده‌سازی و کدگذاری جمعی می‌توانند از برآوردهای مبتنی بر یک نسخه فراتر بروند؛ این پدیده‌ها را با مدل‌های دقیقاً حل‌پذیر بررسی می‌کنم. همچنین به نقش تقارن در حفظ درهم‌تنیدگی در دماهای بالا می‌پردازم." "I investigate how symmetry and fermion-parity constraints shape entanglement and communication. Recent work establishes nonadditivity of entanglement of purification for Werner states and of Rényi entanglement of purification. In fermionic quantum Shannon theory, collective preparation and encoding can outperform what single-copy quantities suggest. I study these effects through explicit, solvable models, alongside the role of symmetry in sustaining entanglement at high temperatures.")
     "figure" "symmetry"
     "papers" (slice
+      (dict "title" "Nonadditivity in fermionic quantum Shannon theory" "url" "https://arxiv.org/abs/2610.06758")
+      (dict "title" "Entanglement of purification for Werner states: canonical purification and nonadditivity" "url" "https://arxiv.org/abs/2610.03630")
       (dict "title" "Rényi Entanglement of Purification Is Non-additive" "url" "https://arxiv.org/abs/2608.28897")
       (dict "title" "Symmetry enforcing entanglement at high temperatures" "url" "https://arxiv.org/abs/2508.20166")
-      (dict "title" "Extendibility of Fermionic Gaussian States" "url" "https://arxiv.org/abs/2508.18532")
     )
   )
   (dict
     "kicker" (cond $isFa "مسیر ۰۳" "Direction 03")
     "title" (cond $isFa "یادگیری‌پذیری و رمزگشایی‌پذیری" "Learnability and decodability")
-    "summary" (cond $isFa "برخی فازها را می‌توان بر اساس این‌که اطلاعات آن‌ها تا چه حد از داده‌های در دسترس قابل یادگیری، رمزگشایی یا بازیابیِ کارآمد است، از یکدیگر متمایز کرد." "I study when physical information can be learned, decoded, or represented efficiently from accessible data. This includes phases that are hard to learn from local data and diagnostics for when quantum memories admit local versus global recovery.")
+    "summary" (cond $isFa "مطالعه می‌کنم که چه زمانی می‌توان اطلاعات فیزیکی را از داده‌های در دسترس به‌طور کارآمد یاد گرفت، رمزگشایی کرد یا بازنمایی نمود. این مسیر شامل فازهایی است که یادگیری آن‌ها از داده‌های موضعی دشوار است و نیز معیارهایی برای تشخیص این‌که بازیابی اطلاعات در حافظه‌های کوانتومی به عملیات موضعی یا سراسری نیاز دارد." "I study when physical information can be learned, decoded, or represented efficiently from accessible data. This includes phases that are hard to learn from local data and diagnostics for when quantum memories admit local versus global recovery.")
     "figure" "learnability"
     "papers" (slice
       (dict "title" "Unlearnable phases of matter" "url" "https://arxiv.org/abs/2602.11262")
@@ -36,10 +38,12 @@
   )
   (dict
     "kicker" (cond $isFa "مسیر ۰۴" "Direction 04")
-    "title" (cond $isFa "شبیه‌سازی سامانه‌های قویاً هم‌بسته" "Simulations of strongly correlated systems")
-    "summary" (cond $isFa "برای مطالعه‌ی سامانه‌های کوانتومی بس‌ذره‌ای، از ابزارهای عددی گوناگونی استفاده می‌کنم؛ از جمله مونت‌کارلوی کوانتومی، شبکه‌های تانسوری، روش‌های گاوسی و دیگر شبیه‌سازی‌های رایانه‌ای." "I also work on numerical approaches to strongly correlated quantum systems, including quantum Monte Carlo, fermionic criticality, and methods aimed at mitigating sign-problem obstructions.")
+    "title" (cond $isFa "سامانه‌های فرمیونی و روش‌های بس‌ذره‌ای" "Fermionic systems and many-body methods")
+    "summary" (cond $isFa "ابزارهای تحلیلی و عددی برای سامانه‌های بس‌ذره‌ای فرمیونی توسعه می‌دهم. برای حالت‌های گاوسی، بررسی می‌کنم که محدودیت‌های ماتریس کوواریانس چگونه به تقریب با حالت‌های حاصل‌ضربی با خطای کنترل‌شده، قضایای متناهی دو فینتی و تضمین‌های بازیابی منجر می‌شوند. این کار شامل کران‌هایی بر انرژی و انرژی آزاد هامیلتونی‌های درجه‌دو و معیارهایی برای گسترش‌پذیری گاوسی است. در بخش عددی نیز از مونت‌کارلوی کوانتومی برای مطالعه‌ی رفتار بحرانی فرمیون‌ها و کاهش موانع مسئله‌ی علامت استفاده می‌کنم." "I develop analytic and numerical tools for fermionic many-body systems. For Gaussian states, I study how covariance-matrix constraints lead to controlled product-state approximations, finite de Finetti theorems, and recovery guarantees. This includes bounds on energies and free energies of quadratic Hamiltonians and criteria for Gaussian extendibility. My numerical work uses quantum Monte Carlo to study fermionic criticality and reduce sign-problem barriers.")
     "figure" "hubbard"
     "papers" (slice
+      (dict "title" "Approximation theorems for fermionic Gaussian states" "url" "https://arxiv.org/abs/2610.01860")
+      (dict "title" "Extendibility of Fermionic Gaussian States" "url" "https://arxiv.org/abs/2508.18532")
       (dict "title" "Chiral Ising Gross-Neveu criticality of a single Dirac cone" "url" "https://arxiv.org/abs/2112.09209")
       (dict "title" "An Amelioration for the Sign Problem: Adiabatic Quantum Monte Carlo" "url" "https://arxiv.org/abs/2012.12911")
     )

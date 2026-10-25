@@ -1,4 +1,4 @@
 ---
-title: "Research"
-description: "Research directions connecting quantum information, quantum matter, error correction, symmetry, and numerical many-body physics."
+title: "پژوهش"
+description: "پژوهش درباره‌ی فازهای حالت آمیخته، حافظه‌های کوانتومی، ناجمع‌پذیری درهم‌تنیدگی، اطلاعات کوانتومی فرمیونی، یادگیری‌پذیری و روش‌های تقریب گاوسی."
 ---

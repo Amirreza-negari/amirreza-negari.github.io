@@ -1,4 +1,4 @@
 ---
-title: "CV"
-description: "A web CV for Amir-Reza Negari, including education, honors, presentations, teaching, leadership, and computational skills."
+title: "رزومه"
+description: "رزومه‌ی امیررضا نگاری: سوابق دانشگاهی، مقاله‌های برگزیده، مهارت‌های فنی، افتخارات، آموزش و خدمات علمی."
 ---
