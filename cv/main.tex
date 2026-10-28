@@ -1,0 +1,231 @@
+% Expanded website CV. Updated 28 October 2026.
+% Personal history: supplied CV PDFs, older TeX, and existing website.
+% Public records and editorial decisions: sources.yaml.
+% Typography and spacing follow the supplied original CV template.
+\documentclass[10pt,letterpaper]{article}
+\usepackage[top=1.55cm,bottom=1.65cm,left=1.75cm,right=1.75cm,footskip=0.8cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default,type1]{sourcesanspro}
+\usepackage{xcolor}
+\definecolor{ink}{RGB}{0,0,0}
+\definecolor{link}{RGB}{0,79,144}
+\definecolor{muted}{RGB}{90,99,111}
+\usepackage{titlesec,enumitem,tabularx,array,needspace,fancyhdr,lastpage,microtype}
+\usepackage[colorlinks=true,urlcolor=link,linkcolor=link,bookmarksopen=true,
+ pdftitle={Amir-Reza Negari | Curriculum Vitae},pdfauthor={Amir-Reza Negari},
+ pdfsubject={Academic background, awards, publications, teaching and service}]{hyperref}
+\urlstyle{same}
+\color{ink}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\emergencystretch}{2em}
+\raggedbottom
+\raggedright
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\footnotesize\color{muted}Amir-Reza Negari \enspace|\enspace Curriculum vitae}
+\fancyfoot[R]{\footnotesize\color{muted}\thepage\ / \pageref*{LastPage}}
+\titleformat{\section}{\large\bfseries\color{link}}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{5pt}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{6pt}{3pt}
+\setlist[itemize]{leftmargin=13pt,topsep=2pt,itemsep=3pt,parsep=0pt,partopsep=0pt}
+\newcommand{\dated}[2]{\par\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X@{\hspace{12pt}}r@{}}#1 & \textcolor{muted}{#2}\\\end{tabularx}\par}
+\newcommand{\entry}[3]{\needspace{46pt}\dated{\textbf{#1}}{#2}#3\par\vspace{3pt}}
+\newcommand{\me}{\textbf{Amir-Reza Negari}}
+\newcommand{\equal}{\textsuperscript{*}}
+\newcommand{\topic}[2]{\needspace{40pt}\textbf{#1:} #2\par\vspace{3pt}}
+\newcommand{\paper}[5]{\needspace{60pt}\noindent\makebox[20pt][l]{\textcolor{muted}{#1.}}\begin{minipage}[t]{\dimexpr\linewidth-20pt\relax}\raggedright\textbf{#2}\par #3\par #4\par{\color{muted}#5}\end{minipage}\par\vspace{3pt}}
+\newcommand{\talk}[4]{\par\begin{minipage}[t]{\linewidth}\raggedright\dated{\textbf{#1}}{#2}#3\ifhmode\enspace\fi#4\end{minipage}\par\vspace{5pt}}
+\newcommand{\course}[4]{\needspace{22pt}\dated{#1 \textcolor{muted}{(#2)}; instructor: #3.}{#4}\vspace{2pt}}
+
+\begin{document}
+{\fontsize{27}{30}\selectfont\bfseries\color{link}Amir-Reza Negari}\hfill{\footnotesize\color{muted}Updated 28 October 2026}\par
+\vspace{4pt}
+Postdoctoral Fellow \enspace|\enspace Institute for Quantum Computing, University of Waterloo\par
+\vspace{3pt}
+\href{mailto:anegari@uwaterloo.ca}{anegari@uwaterloo.ca}\enspace\textbullet\enspace Waterloo, Ontario, Canada\par
+\href{https://amirreza-negari.github.io/}{Website}\enspace\textbullet\enspace
+\href{https://scholar.google.com/citations?user=_kyHGUcAAAAJ&hl=en}{Google Scholar}\enspace\textbullet\enspace
+\href{https://orcid.org/0009-0007-1292-7187}{ORCID}\enspace\textbullet\enspace
+\href{https://inspirehep.net/authors/2851625}{INSPIRE}\enspace\textbullet\enspace
+\href{https://github.com/Amirreza-negari}{GitHub}
+
+\section{Academic Background}
+\entry{Postdoctoral Fellow}{2026--present}{
+\href{https://uwaterloo.ca/institute-for-quantum-computing/contacts/amirreza-negari-0}{Institute for Quantum Computing}, University of Waterloo.\par
+Quantum Interactions Theory Group; supervisor: Christine Muschik.}
+\entry{Ph.D. in Physics, University of Waterloo}{2022--2026}{
+Research at Perimeter Institute for Theoretical Physics.\par
+Supervisors: Timothy H. Hsieh and Roger G. Melko.\par
+Thesis: \href{https://hdl.handle.net/10012/23637}{\textit{Phases of matter in quantum information and error correction}}.\par
+Information-theoretic diagnostics of phases and transitions in quantum systems subject to noise and measurement.}
+\entry{M.Sc. in Physics, University of Waterloo}{2021--2022}{
+\href{https://perimeterinstitute.ca/training/masters-program}{Perimeter Scholars International (PSI)}, Perimeter Institute.\par
+Advisor: Timothy H. Hsieh. Master's essay: \textit{Measurement-induced phase transitions}.}
+\entry{B.Sc., Sharif University of Technology}{2016--2021}{
+Advisor: Abolhassan Vaezi.}
+
+\section{Awards and Recognition}
+\entry{Editors' Suggestion, Physical Review Letters}{2022}{
+\href{https://doi.org/10.1103/PhysRevLett.128.225701}{\textit{Chiral Ising Gross--Neveu Criticality of a Single Dirac Cone: A Quantum Monte Carlo Study}}.\par
+Joint first author with S. Mojtaba Tabatabaei; \textit{Physical Review Letters} \textbf{128}, 225701.}
+\entry{Bronze Medal, International Physics Olympiad}{2016}{
+\href{https://science.olympiad.ch/fileadmin/user_upload/International_Olympiads_in_Switzerland/IPhO_2016/final_ranking.pdf}{47th International Physics Olympiad}, Zurich, Switzerland.}
+\entry{Gold Medal, Iran's National Physics Olympiad}{2015}{
+Included exemption from the final year of high school and the national university entrance examination.}
+\subsection{Fellowships and scholarships}
+\dated{Institute for Quantum Computing fellowship}{}
+\dated{International student scholarship, University of Waterloo}{2022--2026}
+\dated{Perimeter Residence Scholarship}{2022--2026}
+\dated{Perimeter International Scholarship}{2021--2022}
+
+\Needspace{70pt}
+\section{Computational Methods and Software}
+\topic{Programming}{
+Python (JAX, PyTorch, CuPy, Numba CUDA); C/C++; CUDA; Julia; MATLAB.}
+\topic{Scientific computing}{
+GPU and CPU parallel programming; distributed and high-performance computing; Slurm.}
+\topic{Numerical and analytical methods}{
+Tensor networks, density-matrix renormalization group (DMRG) and matrix product states (MPS); determinantal quantum Monte Carlo; Clifford and stabilizer methods; fermionic and bosonic Gaussian formalisms; quantum error-correction decoders, including minimum-weight perfect matching and belief propagation.}
+
+\section{Publications and Preprints}
+Six peer-reviewed articles and seven preprints, listed separately below.\par
+{\small\color{muted}\equal\ Equal contribution.}
+\subsection{Peer-reviewed articles}
+\paper{1}{Symmetry enforcing entanglement at high temperatures}
+{\me\equal, Leonardo A. Lessa\equal, Subhayan Sahu.}
+{\href{https://doi.org/10.1103/rckt-3lfm}{\textit{Physical Review A} \textbf{114}, 022458 (2026)}.\enspace\href{https://arxiv.org/abs/2508.20166}{arXiv:2508.20166}}
+{Conditions under which symmetry and superselection rules preserve thermal entanglement at arbitrarily high temperatures.}
+\paper{2}{Extendibility of Fermionic Gaussian States}
+{\me, Farzin Salek.}
+{\href{https://doi.org/10.1103/65dd-448y}{\textit{Physical Review Letters} \textbf{137}, 080201 (2026)}.\enspace\href{https://arxiv.org/abs/2508.18532}{arXiv:2508.18532}}
+{Covariance-matrix tests for extendibility and quantitative bounds on proximity to separable states.}
+\paper{3}{Spacetime Markov length: A diagnostic for fault tolerance via mixed-state phases}
+{\me, Tyler D. Ellison, Timothy H. Hsieh.}
+{\href{https://doi.org/10.1103/61wf-zx39}{\textit{Physical Review B} \textbf{114}, 045130 (2026)}.\enspace\href{https://arxiv.org/abs/2412.00193}{arXiv:2412.00193}}
+{A decoder-independent diagnostic of fault tolerance using conditional mutual information in repeated syndrome measurements.}
+\paper{4}{Measurement-induced phase transitions in the toric code}
+{\me, Subhayan Sahu, Timothy H. Hsieh.}
+{\href{https://doi.org/10.1103/PhysRevB.109.125148}{\textit{Physical Review B} \textbf{109}, 125148 (2024)}.\enspace\href{https://arxiv.org/abs/2307.02292}{arXiv:2307.02292}}
+{Connections between single-qubit measurements, Gaussian tensor networks and classical loop models.}
+\paper{5}{Chiral Ising Gross--Neveu Criticality of a Single Dirac Cone: A Quantum Monte Carlo Study}
+{S. Mojtaba Tabatabaei\equal, \me\equal, Joseph Maciejko, Abolhassan Vaezi.}
+{\href{https://doi.org/10.1103/PhysRevLett.128.225701}{\textit{Physical Review Letters} \textbf{128}, 225701 (2022)}.\enspace\href{https://arxiv.org/abs/2112.09209}{arXiv:2112.09209}\par\textit{Editors' Suggestion.}}
+{Monte Carlo simulations and finite-size scaling of the transition from a Dirac semimetal to a ferromagnetic insulator.}
+\paper{6}{Amelioration for the Sign Problem: An Adiabatic Quantum Monte Carlo Algorithm}
+{Mohammad-Sadegh Vaezi, \me, Amin Moharramipour, Abolhassan Vaezi.}
+{\href{https://doi.org/10.1103/PhysRevLett.127.217003}{\textit{Physical Review Letters} \textbf{127}, 217003 (2021)}.\enspace\href{https://arxiv.org/abs/2012.12911}{arXiv:2012.12911}}
+{An adiabatic Monte Carlo approach to reducing the sign problem in interacting-fermion simulations.}
+
+\subsection{Preprints}
+\paper{7}{Instability of Markov chains under infinitesimal coherent dissipation}
+{\me, Yijian Zou, Timothy H. Hsieh.}
+{\href{https://arxiv.org/abs/2610.18983}{arXiv:2610.18983}, 13 October 2026.}
+{Local dissipative dynamics that generate infinite Markov length in arbitrarily short time.}
+\paper{8}{Nonadditivity in fermionic quantum Shannon theory}
+{Farzin Salek, \me, Graeme Smith, Jens Eisert, Debbie Leung.}
+{\href{https://arxiv.org/abs/2610.06758}{arXiv:2610.06758}, 5 October 2026.}
+{Nonadditivity of fermionic entanglement of formation, minimum output entropy and Holevo information, with channel-capacity results.}
+\paper{9}{Entanglement of purification for Werner states: canonical purification and nonadditivity}
+{Zahra Baghali Khanian, \me.}
+{\href{https://arxiv.org/abs/2610.03630}{arXiv:2610.03630}, 2 October 2026.}
+{Exact entanglement-of-purification results for a range of two-qubit Werner states and a proof of nonadditivity.}
+\paper{10}{Approximation theorems for fermionic Gaussian states}
+{\me, Farzin Salek, Zolt\'an Zimbor\'as, Aram Harrow, Patrick Hayden, Jens Eisert.}
+{\href{https://arxiv.org/abs/2610.01860}{arXiv:2610.01860}, 1 October 2026.}
+{Product-state, de Finetti and recovery approximations based on Majorana covariance matrices.}
+\paper{11}{R\'enyi Entanglement of Purification Is Non-additive}
+{\me, Zahra Baghali Khanian.}
+{\href{https://arxiv.org/abs/2608.28897}{arXiv:2608.28897}, 28 August 2026.}
+{One-copy optimization and two-copy nonadditivity examples for classical two-qubit states.}
+\paper{12}{Unlearnable phases of matter}
+{Tarun Advaith Kumar, Yijian Zou, \me, Roger G. Melko, Timothy H. Hsieh.}
+{\href{https://arxiv.org/abs/2602.11262}{arXiv:2602.11262}, 11 February 2026.}
+{Connections between conditional correlations and the difficulty of learning noisy-code distributions.}
+\paper{13}{Critical non-equilibrium phases from noisy topological memories}
+{\me, Subhayan Sahu, Jan Behrends, Benjamin B\'eri, Timothy H. Hsieh.}
+{\href{https://arxiv.org/abs/2601.10792}{arXiv:2601.10792}, 15 January 2026.}
+{A critical mixed-state phase retaining partial logical information recoverable by a global decoder but not by any quasi-local decoder.}
+
+\clearpage
+\section{Talks and Posters}
+\subsection{Seminars}
+\talk{Critical Mixed-State Phases from Coherent Errors: CMI, Loop Constraints, and Network Conductance}{11 Nov 2025}
+{Condensed Matter Theory Seminar, University of Cologne; online.}
+{\href{https://events.thp.uni-koeln.de/events/2286}{Announcement}}
+\talk{Fault tolerance via mixed-state phases}{3 Feb 2025}
+{Perimeter Institute for Theoretical Physics.}
+{\href{https://pirsa.org/25020056}{Recording}}
+\talk{Classical simulability of MBQC and measurement-induced transitions in the toric code}{2023}
+{Invited talk, University of British Columbia. Host: Robert Raussendorf.}
+{MBQC: measurement-based quantum computation.}
+\talk{Measurement-induced phase transitions in the toric code}{15 May 2023}
+{Perimeter Institute for Theoretical Physics.}
+{\href{https://pirsa.org/23050143}{Recording}}
+
+\Needspace{85pt}
+\subsection{Conference and group presentations}
+\talk{Extendibility of Fermionic Gaussian States}{7 Oct 2025}
+{Contributed talk, Year of Quantum Across Canada, Institute for Quantum Computing, Waterloo.}
+{\href{https://events.perimeterinstitute.ca/event/1107/contributions/2011/}{Programme}}
+\talk{PSI 2021 cohort project}{20 Jun 2024}
+{Group presentation, PSI 15th Anniversary Reunion, Perimeter Institute.\par}
+{Programme: \href{https://events.perimeterinstitute.ca/event/72/contributions/1154/}{\textit{Merging space and time for fault-tolerance}}.\par
+Recording: \href{https://pirsa.org/24060009}{\textit{Frustration-free monitored dynamics beyond the stabilizer framework}}.\par
+Project team: Amir-Reza Negari, Jacob Hauser, Dongjin Lee, Leonardo Lessa, Neel Modi, Sydney Timmermann and Jinmin Yi.}
+\talk{Measurement-induced phase transitions in the toric code}{7 Mar 2024}
+{Contributed talk, APS March Meeting, Minneapolis. Session W14: Measurement-Induced Phase Transitions.}
+{\href{https://meetings.aps.org/Meeting/MAR24/Session/W14.5}{Programme}}
+
+\Needspace{85pt}
+\subsection{Posters}
+\talk{Spacetime Markov length: a diagnostic for fault tolerance via mixed-state phases}{11--15 Aug 2025}
+{QUDYN25, Max Planck Institute for the Physics of Complex Systems, Dresden.}
+{\href{https://www.pks.mpg.de/qudyn25/poster-contributions}{Programme}}
+\talk{Measurement-induced phase transitions in the toric code}{2023}
+{Boulder Summer School, University of Colorado Boulder.}
+{\href{https://www.colorado.edu/conference/bss/amirreza-negari}{Participant profile}}
+
+\Needspace{95pt}
+\section{Teaching and Mentoring}
+\subsection{Student mentoring}
+\entry{Perimeter Scholars International}{2023--2025}{
+Mentored a student in \href{https://perimeterinstitute.ca/training/masters-program}{PSI}, Perimeter Institute\textquotesingle s intensive one-year master\textquotesingle s programme in theoretical physics, leading to an M.Sc. from the University of Waterloo.}
+\entry{International Summer School for Young Physicists (ISSYP)}{}{
+Supervised a group research project for high-school students at Perimeter Institute. \href{https://perimeterinstitute.ca/news/summer-program-launches-bright-futures-for-young-physicists}{ISSYP} is a two-week programme introducing Canadian and international students to modern physics and research through lectures, activities and mentoring.}
+
+\Needspace{115pt}
+\subsection{Teaching assistantships}
+\course{Statistical Physics}{M.Sc.}{Sidney Redner}{Fall 2022}
+\course{Quantum Mechanics II}{undergraduate}{Abolhassan Vaezi}{Spring 2021}
+\course{Quantum Mechanics I}{undergraduate}{Abolhassan Vaezi}{Fall 2020}
+\course{Thermodynamics II}{undergraduate}{Vahid Karimipour}{Fall 2019}
+\course{Thermodynamics I}{undergraduate}{Vahid Karimipour}{Spring 2019}
+\course{Mathematical Physics I}{undergraduate}{Laleh Memarzadeh}{Spring 2018}
+
+\subsection{Physics Olympiad instruction and outreach}
+\entry{Thermodynamics instructor, Young Scholars Club}{2019}{
+Taught thermodynamics for Physics Olympiad training. The club runs Iran's \href{https://ioi2017.ir/files/volume11si.pdf}{national scientific Olympiads} for the Ministry of Education, selecting top students through nationwide competitions and training Iran's teams for international Olympiads.}
+\entry{Physics Olympiad instructor and laboratory tutor}{2015--2018}{
+Taught mechanics, electrodynamics, problem solving and laboratory work at Salam, Farzanegan, Tabatabaei and Alborz high schools in Iran.\par
+These include \href{https://en.wikipedia.org/wiki/Tehran_Farzanegan_School}{Farzanegan}, part of the national gifted-education network (NODET/SAMPAD); \href{https://www.iranicaonline.org/articles/alborz-college/}{Alborz}, a historic Tehran school with roots in 1873; and the \href{https://salamsch.org/olympiad-results/}{Salam} and \href{https://mat.ir/}{Allameh Tabatabaei} school networks, whose students have earned national and international Olympiad medals.}
+
+\section{Academic Service}
+\subsection{Peer review}
+\begin{itemize}
+\item Quantum Information Processing (QIP) conference: reviewer, 2026 and 2027.
+\item \textit{PRX Quantum}: referee.
+\item \textit{Physical Review B}: referee.
+\end{itemize}
+
+\subsection{Research community and seminar organization}
+\begin{itemize}
+\item Founded and organized the \textbf{Eureka Club} at Perimeter Institute for graduate students and postdoctoral researchers.
+\item Co-founded and organized the \textbf{Topological Quantum Club} at Perimeter Institute for graduate students and postdoctoral researchers.
+\item Founded and organized a \textbf{biweekly arXiv lunch} for the Quantum Matter group at Perimeter Institute.
+\end{itemize}
+\end{document}

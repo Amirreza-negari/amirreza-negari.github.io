@@ -1,4 +1,4 @@
 ---
 title: "CV"
-description: "Amir-Reza Negari’s CV: technical skills, awards, academic experience, publications, teaching, and talks."
+description: "Read or download Amir-Reza Negari’s curriculum vitae."
 ---

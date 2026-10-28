@@ -1,0 +1,120 @@
+checked_on: 2026-10-28
+scope: Expanded academic CV for the existing website PDF viewer.
+layout_template: Original supplied CV, using Source Sans Pro at 10 points, blue headings and rules, and compact spacing. Restyled on 28 October 2026 at the user's request; expanded content and links preserved.
+supplied_sources:
+  - archive/academic-cv-2026-10-11.tex
+  - Amir-Reza_Negari_CV (2).pdf
+  - Amir-Reza_Negari_Anthropic_CV.pdf
+  - ../data/cv.yaml
+  - ../layouts/section/cv.html (historical English CV)
+biography:
+  postdoctoral_appointment:
+    url: https://uwaterloo.ca/institute-for-quantum-computing/contacts/amirreza-negari-0
+    evidence: IQC postdoctoral fellow; supervisor Christine Muschik. Start year from supplied CV.
+  phd:
+    url: https://hdl.handle.net/10012/23637
+    metadata: https://uwspace.uwaterloo.ca/items/053d1bad-98b5-40b1-aae8-319a0ca928d0/full
+    defence_notice: https://uwaterloo.ca/daily-bulletin/2026-05-12
+    evidence: University of Waterloo Physics PhD, 2026; Hsieh and Melko are both supervisors. Perimeter is the research institution.
+  masters:
+    url: https://uwaterloo.ca/convocation/sites/default/files/uploads/documents/fp2037-convoprogram-fall2022-friday-final-final.pdf
+    programme: https://perimeterinstitute.ca/training/masters-program
+    evidence: MSc Physics in 2022, Waterloo degree with PSI at Perimeter. Essay title and advisor from supplied and historical CV.
+  bronze_medal:
+    url: https://science.olympiad.ch/fileadmin/user_upload/International_Olympiads_in_Switzerland/IPhO_2016/final_ranking.pdf
+    evidence: Amirreza Negari, Iran, Bronze; PDF page 6.
+  editors_suggestion:
+    url: https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.128.225701
+    evidence: Editors' Suggestion and equal contribution of Tabatabaei and Negari, 3 June 2022.
+papers:
+  journal_articles:
+    - {arxiv: '2508.20166', doi: '10.1103/rckt-3lfm', published: 2026-08-27}
+    - {arxiv: '2508.18532', doi: '10.1103/65dd-448y', published: 2026-08-18}
+    - {arxiv: '2412.00193', doi: '10.1103/61wf-zx39', published: 2026-07-29}
+    - {arxiv: '2307.02292', doi: '10.1103/PhysRevB.109.125148', published: 2024-03-27}
+    - {arxiv: '2112.09209', doi: '10.1103/PhysRevLett.128.225701', published: 2022-06-03}
+    - {arxiv: '2012.12911', doi: '10.1103/PhysRevLett.127.217003', published: 2021-11-16}
+  preprints:
+    - {arxiv: '2610.18983', submitted: 2026-10-13}
+    - {arxiv: '2610.06758', submitted: 2026-10-05}
+    - {arxiv: '2610.03630', submitted: 2026-10-02}
+    - {arxiv: '2610.01860', submitted: 2026-10-01}
+    - {arxiv: '2608.28897', submitted: 2026-08-28}
+    - {arxiv: '2602.11262', submitted: 2026-02-11}
+    - {arxiv: '2601.10792', submitted: 2026-01-15}
+  verification: Author lists, titles, dates and status checked against individual arXiv and APS records. Summaries describe collaborative papers, not individual implementation claims.
+  qualifications:
+    - Paper 13 retains partial logical information; do not claim full recovery.
+    - Equal-contribution markers apply only to the symmetry and Chiral Ising papers.
+    - Use published titles for the 2021 AQMC and 2026 symmetry articles.
+presentations:
+  cologne_2025: https://events.thp.uni-koeln.de/events/2286
+  year_of_quantum_2025: https://events.perimeterinstitute.ca/event/1107/contributions/2011/
+  fault_tolerance_2025: https://pirsa.org/25020056
+  aps_2024: https://meetings.aps.org/Meeting/MAR24/Session/W14.5
+  perimeter_2023: https://pirsa.org/23050143
+  qudyn_2025:
+    url: https://www.pks.mpg.de/qudyn25/poster-contributions
+    dates: https://www.pks.mpg.de/qudyn25
+    correction: Official poster title is Spacetime Markov length, not Mixed-state quantum criticality in the older CV.
+  boulder_2023:
+    url: https://www.colorado.edu/conference/bss/amirreza-negari
+    evidence: Attendance corroborated. Poster title from supplied CV.
+  psi_reunion_2024:
+    programme: https://events.perimeterinstitute.ca/event/72/contributions/1154/
+    proposal: https://events.perimeterinstitute.ca/event/72/contributions/1203/
+    recording: https://pirsa.org/24060009
+    evidence: Cohort project jointly credited to seven people; not a solo talk.
+    discrepancy: Programme says Merging space and time for fault-tolerance; recording and project proposal say Frustration-free monitored dynamics beyond the stabilizer framework. Treat as one cohort contribution, not two talks.
+    user_confirmation: On 28 October 2026, the user requested both titles with their source labels; both are included in one cohort-project entry.
+omitted_coauthor_presentations:
+  - {url: 'https://meetings-archive.aps.org/smt/2026/mar-b18/11/', presenter: Subhayan Sahu, date: 2026-03-16}
+  - {url: 'https://events.perimeterinstitute.ca/event/1563/contributions/2118/', presenter: Tarun Advaith Kumar, date: 2025-10-17}
+  - {url: 'https://events.perimeterinstitute.ca/event/60/contributions/1041/', presenter: Meenu Kumari, date: 2024-05-30}
+  - {url: 'https://indico.global/event/439/contributions/contributions.pdf#page=127', presenter: Meenu Kumari, date: 2023-06-21}
+self_reported_retained:
+  - BSc and study dates; advisers not independently documented elsewhere.
+  - National Olympiad gold and educational exemptions.
+  - Named scholarships and IQC fellowship; no invented IQC award year.
+  - Six teaching assistantships with course names, instructors and terms.
+  - PSI and ISSYP mentoring; no invented student counts or ISSYP year.
+  - Olympiad instruction at the Young Scholars Club and Salam, Farzanegan, Tabatabaei and Alborz schools.
+  - Three seminar/community organizing activities and journal/conference reviewing.
+  - Computational tools and methods; no invented proficiency scores, speedups or code projects.
+  - UBC invited talk and host Robert Raussendorf.
+held_for_confirmation:
+  - Historical website scholarship figures were $38,000/year, $8,000/year and $47,388. Omitted because currency and possible funding overlap are not specified.
+  - No unsupported roles, grants, honours or journal acceptances added.
+
+teaching_context:
+  young_scholars_club:
+    url: https://ioi2017.ir/files/volume11si.pdf
+    source: Iranian National Olympiad in Informatics, Olympiads in Informatics 11 (special issue), 25-33 (2017), DOI 10.15388/ioi.2017.special.04.
+    evidence: The national committee authors describe YSC as organizing scientific Olympiads for the Ministry of Education and selecting and preparing top students for international Olympiads, including physics.
+  farzanegan:
+    url: https://en.wikipedia.org/wiki/Tehran_Farzanegan_School
+    corroboration: https://farzanegan-sch.ir/
+    evidence: Farzanegan is part of the NODET/SAMPAD gifted-education network. No campus or rank is inferred; the supplied CV does not specify a campus.
+  alborz:
+    url: https://www.iranicaonline.org/articles/alborz-college/
+    evidence: Historical Alborz institution traces its origins to a school established in 1873. No numerical school ranking claimed.
+  salam:
+    url: https://salamsch.org/olympiad-results/
+    corroboration: https://t.me/s/salamsch?q=%23%D8%A7%D9%81%D8%AA%D8%AE%D8%A7%D8%B1%D8%A7%D8%AA
+    evidence: Official school site and official channel document national and international Olympiad achievements, including 2024 IPhO gold. These achievements contextualize the institution and are not attributed to Negari's teaching.
+  tabatabaei:
+    url: https://mat.ir/
+    evidence: Official school network site documents Olympiad medals and competitive admissions. No campus or rank is inferred.
+  psi:
+    url: https://perimeterinstitute.ca/training/masters-program
+    evidence: One-year theoretical physics master's programme at Perimeter, leading to a University of Waterloo MSc. Description is programme context, not additional mentoring duties.
+  issyp:
+    url: https://perimeterinstitute.ca/news/summer-program-launches-bright-futures-for-young-physicists
+    evidence: Two-week programme for Canadian and international high-school students, with modern physics activities and research mentoring. No year or cohort size is assigned to Negari's role.
+revision_2026_10_28:
+  - Research overview removed at the user's request; publications and computational skills retained.
+  - QIP 2026 and 2027 reviewing explicitly confirmed by the user; PRX Quantum and Physical Review B are separate list items.
+  - Girls' Olympiad department initiative omitted at the user's request; the archived supplied CV remains unchanged.
+  - Seminars, conference/group presentations and posters grouped separately.
+  - Presentations by Coauthors section removed at the user's request; source records retained only as editorial history.
+  - Retained both source-labelled PSI reunion titles in one group presentation, per the user's earlier confirmation.
