@@ -1195,7 +1195,8 @@ html[lang="fa"] .post-content blockquote p:last-child {
 .collab-map-stage {
   position: relative;
   width: 100%;
-  height: 488px;
+  aspect-ratio: 4 / 3;
+  max-height: 488px;
   overflow: hidden;
   border-radius: 8px;
   background: #e6edf0;
@@ -1207,6 +1208,10 @@ html[lang="fa"] .post-content blockquote p:last-child {
   inset: 0;
   width: 100%;
   height: 100%;
+  background: #e6edf0;
+}
+
+.world-map.leaflet-container {
   background: #e6edf0;
 }
 
@@ -1952,7 +1957,8 @@ html[lang="fa"] .post-content blockquote p:last-child {
   }
 
   .collab-map-stage {
-    height: 360px;
+    aspect-ratio: 16 / 10;
+    max-height: 360px;
   }
 
   .collab-detail {
@@ -2000,6 +2006,10 @@ html[lang="fa"] .post-content blockquote p:last-child {
 }
 
 @media (max-width: 430px) {
+  .collab-header h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
   .hero-card {
     max-width: 285px;
   }
@@ -2019,10 +2029,6 @@ html[lang="fa"] .post-content blockquote p:last-child {
 
   .collab-map-panel {
     padding: 0.65rem;
-  }
-
-  .collab-map-stage {
-    height: 310px;
   }
 
   .collab-map-toolbar {

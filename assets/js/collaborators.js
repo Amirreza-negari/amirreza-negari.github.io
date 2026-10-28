@@ -10,10 +10,12 @@
   const reset = page.querySelector("[data-map-reset]");
   const markers = [];
   const locations = cards.map((card) => [Number(card.dataset.lat), Number(card.dataset.lng)]);
+  const worldBounds = [[-90, -180], [90, 180]];
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   let map = null;
   let resizeObserver = null;
   let selected = 0;
+  let showingOverview = true;
 
   function select(index, pan = true) {
     const card = cards[index];
@@ -37,7 +39,10 @@
       }
       marker.setZIndexOffset(i === index ? 1000 : 0);
     });
-    if (map && pan) map.flyTo(locations[index], 4, { animate: !reducedMotion, duration: 0.65 });
+    if (map && pan) {
+      showingOverview = false;
+      map.flyTo(locations[index], 4, { animate: !reducedMotion, duration: 0.65 });
+    }
   }
 
   // The list works independently of Leaflet. Without JS, native details still open.
@@ -62,7 +67,26 @@
 
   function showOverview() {
     if (!map) return;
-    map.fitBounds(locations, { padding: [40, 40], maxZoom: 2, animate: false });
+    map.fitBounds(locations, {
+      paddingTopLeft: [52, 40],
+      paddingBottomRight: [24, 24],
+      maxZoom: 2,
+      animate: false
+    });
+    showingOverview = true;
+  }
+
+  function resizeMap() {
+    if (!map) return;
+    const keepOverview = showingOverview;
+    map.stop();
+    map.invalidateSize({ pan: false });
+    const size = map.getSize();
+    const worldSize = map.getPixelWorldBounds(0).getSize();
+    // Prevent zooming out beyond the local image, including after phone rotation.
+    map.setMinZoom(map.getScaleZoom(Math.max(size.x / worldSize.x, size.y / worldSize.y), 0));
+    if (keepOverview) showOverview();
+    map.panInsideBounds(worldBounds, { animate: false });
   }
 
   function restoreStaticMap() {
@@ -71,6 +95,7 @@
     mapElement.hidden = true;
     reset.hidden = true;
     if (resizeObserver) resizeObserver.disconnect();
+    window.removeEventListener("resize", resizeMap);
     // Retain the native overview and collaborator list even after a partial failure.
     const failedMap = map;
     map = null;
@@ -86,19 +111,24 @@
       crs: L.CRS.EPSG4326,
       center: locations[0],
       zoom: 4,
-      minZoom: 0,
+      minZoom: -2,
       maxZoom: 6,
+      zoomSnap: 0,
+      zoomDelta: 0.5,
+      zoomAnimation: false,
+      bounceAtZoomLimits: false,
+      trackResize: false,
       scrollWheelZoom: false,
-      maxBounds: [[-90, -180], [90, 180]],
+      maxBounds: worldBounds,
       maxBoundsViscosity: 1,
       attributionControl: false
     });
 
     // This local vector image replaces hosted tiles; no API keys or network provider.
-    const basemap = L.imageOverlay(mapElement.dataset.mapImage, [[-90, -180], [90, 180]]);
+    const basemap = L.imageOverlay(mapElement.dataset.mapImage, worldBounds);
     basemap.on("load", () => {
       if (!map) return;
-      map.invalidateSize();
+      resizeMap();
       page.classList.add("is-map-ready");
       overview.setAttribute("hidden", "");
       reset.hidden = false;
@@ -121,14 +151,18 @@
       marker.bindTooltip(label, { direction: "top", offset: [0, -24] });
       markers.push(marker);
     });
+    // Only user interaction leaves the overview; layout changes must keep every pin in view.
+    const leaveOverview = () => { showingOverview = false; };
+    mapElement.addEventListener("pointerdown", leaveOverview);
+    mapElement.addEventListener("keydown", leaveOverview);
     reset.addEventListener("click", showOverview);
-    showOverview();
+    resizeMap();
     select(selected, false);
     if (window.ResizeObserver) {
-      resizeObserver = new ResizeObserver(() => {
-        if (map) map.invalidateSize({ pan: false });
-      });
+      resizeObserver = new ResizeObserver(resizeMap);
       resizeObserver.observe(mapElement);
+    } else {
+      window.addEventListener("resize", resizeMap);
     }
   } catch (error) {
     restoreStaticMap();
