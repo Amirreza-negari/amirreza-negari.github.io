@@ -5,23 +5,13 @@
 <section class="hero-grid">
   <div class="hero-text">
     {{ if $isFa }}
-      <div class="fa-bio">
-        <p class="eyebrow">فیزیک‌دان نظری</p>
+      <h1>امیررضا نگاری</h1>
 
-        <h1>امیررضا نگاری</h1>
-
-        <p class="hero-subtitle">
-          من پژوهشگر پسادکتری در مؤسسه محاسبات کوانتومی دانشگاه واترلو و عضو گروه
-          برهم‌کنش‌های کوانتومی هستم. در مرز میان
-          اطلاعات کوانتومی، ماده کوانتومی و تصحیح خطای کوانتومی پژوهش می‌کنم.
-        </p>
-
-        <p class="hero-description">
-          در کارم، ایده‌های تحلیلی را با ابزارهای عددی ترکیب می‌کنم تا فیزیکِ اطلاعات
-          و ماده کوانتومی را بهتر بفهمم؛ از تصحیح خطا و حافظه‌های کوانتومی گرفته تا
-          نظریه درهم‌تنیدگی، قابلیت کدگشایی و قابلیت یادگیری.
-        </p>
-      </div>
+      <p class="hero-description">
+        در کارم، ایده‌های تحلیلی را با ابزارهای عددی ترکیب می‌کنم تا فیزیکِ اطلاعات
+        و ماده کوانتومی را بهتر بفهمم؛ از تصحیح خطا و حافظه‌های کوانتومی گرفته تا
+        نظریهٔ درهم‌تنیدگی، رمزگشایی‌پذیری و یادگیری‌پذیری.
+      </p>
     {{ else }}
       <h1>Amirreza Negari</h1>
 
@@ -32,47 +22,25 @@
       </p>
     {{ end }}
 
-    {{ if $isFa }}
-    <div class="hero-buttons">
-      <a href="{{ if $isFa }}/fa/research/{{ else }}/research/{{ end }}">{{ if $isFa }}پژوهش{{ else }}Research{{ end }}</a>
-      <a href="{{ if $isFa }}/fa/papers/{{ else }}/papers/{{ end }}">{{ if $isFa }}مقاله‌ها{{ else }}Papers{{ end }}</a>
-      <a href="{{ if $isFa }}/fa/cv/{{ else }}/cv/{{ end }}">{{ if $isFa }}رزومه{{ else }}CV{{ end }}</a>
-    </div>
-    {{ end }}
-
-    {{ if $isFa }}
-    <div class="hero-links">
-      <a href="mailto:anegari@uwaterloo.ca">{{ if $isFa }}ایمیل{{ else }}Email{{ end }}</a>
-      <span>·</span>
-      <a href="https://github.com/Amirreza-negari">{{ if $isFa }}گیتهاب{{ else }}GitHub{{ end }}</a>
-      <span>·</span>
-      <a href="https://scholar.google.com/citations?user=_kyHGUcAAAAJ&hl=en">{{ if $isFa }}گوگل اسکالر{{ else }}Google Scholar{{ end }}</a>
-      <span>·</span>
-      <a href="https://inspirehep.net/authors/2851625?ui-citation-summary=true">{{ if $isFa }}این‌اسپایر{{ else }}INSPIRE{{ end }}</a>
-      <span>·</span>
-      <a href="https://orcid.org/0009-0007-1292-7187">{{ if $isFa }}ارکید{{ else }}ORCID{{ end }}</a>
-    </div>
-    {{ else }}
     <div class="hero-links hero-icon-links">
       {{ range slice
-        (dict "name" "email" "label" "Email" "url" "mailto:anegari@uwaterloo.ca")
-        (dict "name" "github" "label" "GitHub" "url" "https://github.com/Amirreza-negari")
-        (dict "name" "googlescholar" "label" "Google Scholar" "url" "https://scholar.google.com/citations?user=_kyHGUcAAAAJ&hl=en")
-        (dict "name" "inspire" "label" "INSPIRE" "url" "https://inspirehep.net/authors/2851625?ui-citation-summary=true")
-        (dict "name" "orcid" "label" "ORCID" "url" "https://orcid.org/0009-0007-1292-7187")
+        (dict "name" "email" "label" (cond $isFa "ایمیل" "Email") "url" "mailto:anegari@uwaterloo.ca")
+        (dict "name" "github" "label" (cond $isFa "گیت‌هاب" "GitHub") "url" "https://github.com/Amirreza-negari")
+        (dict "name" "googlescholar" "label" (cond $isFa "گوگل اسکالر" "Google Scholar") "url" "https://scholar.google.com/citations?user=_kyHGUcAAAAJ&hl=en")
+        (dict "name" "inspire" "label" (cond $isFa "این‌اسپایر" "INSPIRE") "url" "https://inspirehep.net/authors/2851625?ui-citation-summary=true")
+        (dict "name" "orcid" "label" (cond $isFa "ارکید" "ORCID") "url" "https://orcid.org/0009-0007-1292-7187")
       }}
       <a href="{{ .url }}" aria-label="{{ .label }}" title="{{ .label }}">
         {{ partial "profile-icon.html" . }}
       </a>
       {{ end }}
     </div>
-    {{ end }}
   </div>
 
   <div class="hero-card">
     <img class="profile-photo" src="/images/profile/amirreza-negari-profile-photo.jpg" alt="{{ if $isFa }}امیررضا نگاری، فیزیک‌دان نظری و پژوهشگر پسادکتری در مؤسسه محاسبات کوانتومی دانشگاه واترلو{{ else }}Amirreza Negari, theoretical physicist and postdoctoral fellow at the Institute for Quantum Computing{{ end }}">
     <p>
-      {{ if $isFa }}پژوهشگر پسادکتری در مؤسسه محاسبات کوانتومی دانشگاه واترلو.{{ else }}I am a postdoctoral fellow at the Institute for Quantum Computing (IQC){{ end }}
+      {{ if $isFa }}من پژوهشگر پسادکتری در مؤسسهٔ محاسبات کوانتومی (IQC) هستم{{ else }}I am a postdoctoral fellow at the Institute for Quantum Computing (IQC){{ end }}
     </p>
   </div>
 </section>
@@ -80,12 +48,11 @@
 <section class="section-block">
   <div class="section-header">
     <p class="eyebrow">{{ if $isFa }}پژوهش{{ else }}Research{{ end }}</p>
-    {{ if $isFa }}<h2>مسیرهای پژوهشی</h2>{{ end }}
   </div>
 
   <div class="focus-flip-grid">
     <label class="focus-flip-card">
-      <input class="focus-card-toggle" type="checkbox" aria-label="Flip mixed-state phases and quantum memories card">
+      <input class="focus-card-toggle" type="checkbox" aria-label="{{ if $isFa }}نمایش توضیحات فازهای حالت آمیخته و حافظه‌های کوانتومی{{ else }}Flip mixed-state phases and quantum memories card{{ end }}">
       <span class="focus-card-inner">
         <span class="focus-card-face focus-card-front">
           <span class="research-figure focus-card-figure" aria-hidden="true">
@@ -122,7 +89,7 @@
             {{ if $isFa }}
               با استفاده از طول مارکوفی و اطلاعات متقابل شرطی، حافظه‌های کوانتومی
               نویزی و فازهای حالت آمیخته را مطالعه می‌کنم؛ هم برای تشخیص تحمل خطا و
-              هم برای فهم این‌که اتلاف موضعی چگونه هم‌بستگی‌های شرطی دوربرد ایجاد می‌کند.
+              هم برای فهم رشد سریع هم‌بستگی‌های شرطی دوربرد در اثر اتلاف موضعی.
             {{ else }}
               I use Markov length and conditional mutual information to study noisy quantum memories and mixed-state phases, from diagnostics for fault tolerance to the rapid growth of long-range conditional correlations under local dissipation.
             {{ end }}
@@ -132,7 +99,7 @@
     </label>
 
     <label class="focus-flip-card">
-      <input class="focus-card-toggle" type="checkbox" aria-label="Flip entanglement and quantum information card">
+      <input class="focus-card-toggle" type="checkbox" aria-label="{{ if $isFa }}نمایش توضیحات درهم‌تنیدگی و اطلاعات کوانتومی{{ else }}Flip entanglement and quantum information card{{ end }}">
       <span class="focus-card-inner">
         <span class="focus-card-face focus-card-front">
           <span class="research-figure focus-card-figure" aria-hidden="true">
@@ -167,7 +134,7 @@
     </label>
 
     <label class="focus-flip-card">
-      <input class="focus-card-toggle" type="checkbox" aria-label="Flip learnability and decodability card">
+      <input class="focus-card-toggle" type="checkbox" aria-label="{{ if $isFa }}نمایش توضیحات یادگیری‌پذیری و رمزگشایی‌پذیری{{ else }}Flip learnability and decodability card{{ end }}">
       <span class="focus-card-inner">
         <span class="focus-card-face focus-card-front">
           <span class="research-figure focus-card-figure" aria-hidden="true">
@@ -201,7 +168,7 @@
     </label>
 
     <label class="focus-flip-card">
-      <input class="focus-card-toggle" type="checkbox" aria-label="Flip fermionic systems and many-body methods card">
+      <input class="focus-card-toggle" type="checkbox" aria-label="{{ if $isFa }}نمایش توضیحات سامانه‌های فرمیونی و روش‌های بس‌ذره‌ای{{ else }}Flip fermionic systems and many-body methods card{{ end }}">
       <span class="focus-card-inner">
         <span class="focus-card-face focus-card-front">
           <span class="research-figure focus-card-figure" aria-hidden="true">
@@ -233,6 +200,7 @@
               برای حالت‌های گاوسی فرمیونی، تقریب‌هایی با کران خطای مشخص و قضایای
               بازیابی به دست می‌آورم. در کنار این کار، از مونت‌کارلوی کوانتومی برای
               مطالعه‌ی رفتار بحرانی فرمیون‌ها و کاهش موانع مسئله‌ی علامت استفاده می‌کنم.
+              ماتریس‌های کوواریانس، ساختار این حالت‌ها را به محاسبات عملی بس‌ذره‌ای پیوند می‌دهند.
             {{ else }}
               I develop controlled approximations and recovery results for fermionic Gaussian states, alongside quantum Monte Carlo methods for fermionic criticality and the sign problem. Covariance matrices connect the structure of these states to practical many-body calculations.
             {{ end }}
@@ -250,7 +218,6 @@
 <section class="section-block">
   <div class="section-header">
     <p class="eyebrow">{{ if $isFa }}نمایه{{ else }}Profile{{ end }}</p>
-    {{ if $isFa }}<h2>در یک نگاه</h2>{{ end }}
   </div>
 
   <div class="theme-grid glance-grid">
@@ -270,7 +237,7 @@
         </p>
       </div>
 
-      <div class="path-figure" aria-label="{{ if $isFa }}مسیر دانشگاهی از المپیاد فیزیک تا شریف، PSI، دکتری در پریمیتر و پسادکتری در مؤسسه محاسبات کوانتومی{{ else }}Academic path from Physics Olympiad to Sharif, PSI, a PhD at Perimeter, and a postdoc at IQC{{ end }}">
+      <div class="path-figure" dir="ltr" aria-label="{{ if $isFa }}مسیر دانشگاهی از المپیاد فیزیک تا شریف، PSI، دکتری در پریمیتر و پسادکتری در مؤسسه محاسبات کوانتومی{{ else }}Academic path from Physics Olympiad to Sharif, PSI, a PhD at Perimeter, and a postdoc at IQC{{ end }}">
         <svg viewBox="0 0 650 150" role="img">
           <path class="path-line" d="M48 76h554"></path>
           <g class="path-stop">
@@ -324,9 +291,9 @@
       <p>
         {{ if $isFa }}
           آموزش همیشه بخش مهمی از مسیر من در فیزیک بوده است؛ از تدریس المپیاد گرفته تا
-          همراهی با دانشجویان در مؤسسه‌ی پریمیتر. برای من، آموزش فقط به حل کردن مسئله
-          خلاصه نمی‌شود؛ آن‌چه بیشتر برایم اهمیت دارد، کمک به دیدن ایده‌ی ساده و روشنی
-          است که پشت یک مسئله‌ی سخت پنهان شده است.
+          راهنمایی دانشجویان در مؤسسهٔ پریمیتر. از کمک به دانشجویان برای پیدا کردن ایدهٔ سادهٔ
+          پشت یک مسئلهٔ دشوار و شکل دادن به جمع‌هایی که چنین شیوه‌ای از فکر کردن در آن‌ها
+          به‌طور طبیعی جریان دارد، لذت می‌برم.
         {{ else }}
           Teaching has been a central part of my physics path, from Olympiad instruction to
           mentoring students at Perimeter. I enjoy helping students find the simple idea behind a
@@ -341,16 +308,15 @@
 <section class="section-block">
   <div class="section-header">
     <p class="eyebrow">{{ if $isFa }}مقاله‌ها{{ else }}Papers{{ end }}</p>
-    {{ if $isFa }}<h2>مقاله‌های اخیر</h2>{{ end }}
   </div>
 
   <div class="home-paper-grid">
     <article class="home-paper-card">
       <span class="home-paper-number">01</span>
       <span class="home-paper-meta">{{ if $isFa }}پیش‌چاپ · ۲۰۲۶{{ else }}Preprint · 2026{{ end }}</span>
-      <h3>Instability of Markov chains under infinitesimal coherent dissipation</h3>
+      <h3 lang="en" dir="ltr">Instability of Markov chains under infinitesimal coherent dissipation</h3>
       <p>
-        {{ if $isFa }}با Yijian Zou و Timothy H. Hsieh.{{ else }}With Yijian Zou and Timothy H. Hsieh.{{ end }}
+        {{ if $isFa }}با <bdi>Yijian Zou</bdi> و <bdi>Timothy H. Hsieh</bdi>.{{ else }}With Yijian Zou and Timothy H. Hsieh.{{ end }}
       </p>
       <a href="https://arxiv.org/abs/2610.18983">arXiv</a>
     </article>
@@ -358,9 +324,9 @@
     <article class="home-paper-card">
       <span class="home-paper-number">02</span>
       <span class="home-paper-meta">{{ if $isFa }}پیش‌چاپ · ۲۰۲۶{{ else }}Preprint · 2026{{ end }}</span>
-      <h3>Nonadditivity in fermionic quantum Shannon theory</h3>
+      <h3 lang="en" dir="ltr">Nonadditivity in fermionic quantum Shannon theory</h3>
       <p>
-        {{ if $isFa }}با Farzin Salek، Graeme Smith، Jens Eisert و Debbie Leung.{{ else }}With Farzin Salek, Graeme Smith, Jens Eisert, and Debbie Leung.{{ end }}
+        {{ if $isFa }}با <bdi>Farzin Salek</bdi>، <bdi>Graeme Smith</bdi>، <bdi>Jens Eisert</bdi> و <bdi>Debbie Leung</bdi>.{{ else }}With Farzin Salek, Graeme Smith, Jens Eisert, and Debbie Leung.{{ end }}
       </p>
       <a href="https://arxiv.org/abs/2610.06758">arXiv</a>
     </article>
@@ -368,9 +334,9 @@
     <article class="home-paper-card">
       <span class="home-paper-number">03</span>
       <span class="home-paper-meta">{{ if $isFa }}پیش‌چاپ · ۲۰۲۶{{ else }}Preprint · 2026{{ end }}</span>
-      <h3>Entanglement of purification for Werner states: canonical purification and nonadditivity</h3>
+      <h3 lang="en" dir="ltr">Entanglement of purification for Werner states: canonical purification and nonadditivity</h3>
       <p>
-        {{ if $isFa }}با Zahra Baghali Khanian.{{ else }}With Zahra Baghali Khanian.{{ end }}
+        {{ if $isFa }}با <bdi>Zahra Baghali Khanian</bdi>.{{ else }}With Zahra Baghali Khanian.{{ end }}
       </p>
       <a href="https://arxiv.org/abs/2610.03630">arXiv</a>
     </article>
@@ -378,9 +344,9 @@
     <article class="home-paper-card">
       <span class="home-paper-number">04</span>
       <span class="home-paper-meta">{{ if $isFa }}پیش‌چاپ · ۲۰۲۶{{ else }}Preprint · 2026{{ end }}</span>
-      <h3>Approximation theorems for fermionic Gaussian states</h3>
+      <h3 lang="en" dir="ltr">Approximation theorems for fermionic Gaussian states</h3>
       <p>
-        {{ if $isFa }}با Farzin Salek، Zoltán Zimborás، Aram Harrow، Patrick Hayden و Jens Eisert.{{ else }}With Farzin Salek, Zoltán Zimborás, Aram Harrow, Patrick Hayden, and Jens Eisert.{{ end }}
+        {{ if $isFa }}با <bdi>Farzin Salek</bdi>، <bdi>Zoltán Zimborás</bdi>، <bdi>Aram Harrow</bdi>، <bdi>Patrick Hayden</bdi> و <bdi>Jens Eisert</bdi>.{{ else }}With Farzin Salek, Zoltán Zimborás, Aram Harrow, Patrick Hayden, and Jens Eisert.{{ end }}
       </p>
       <a href="https://arxiv.org/abs/2610.01860">arXiv</a>
     </article>
@@ -396,13 +362,13 @@
     <h2>{{ if $isFa }}تماس{{ else }}Contact{{ end }}</h2>
     <p>
       {{ if $isFa }}
-        از دریافت ایمیل، چه درباره‌ی موضوعات پژوهشی و چه غیرپژوهشی، استقبال می‌کنم.
-        می‌توانید هر فکر تازه یا جالبی را که در ذهن دارید، از تاریخ و سیاست گرفته تا
-        هوش مصنوعی و زبان‌شناسی، به این آدرس برایم بفرستید. گاهی هم چیزهایی را در
+        همیشه خوشحال می‌شوم مسئله‌های فیزیک، پرسش‌ها یا ایده‌های نیمه‌کاره‌تان را با ایمیل
+        دریافت کنم. از شنیدن دربارهٔ هوش مصنوعی، تاریخ، زبان‌ها و سیاست، یا تماشای یک
+        ویدئوی جالب دربارهٔ خط میخی هم لذت می‌برم. گاهی فکرهای مرتبط را در
         <a href="/fa/notes/">یادداشت‌ها</a> می‌نویسم.
       {{ else }}
         I’d always be happy to receive physics problems, questions, or half-formed thoughts by
-        email. I also enjoy hearing about AI, history, languages, Middle East politics, or watching
+        email. I also enjoy hearing about AI, history, languages, politics, or watching
         an interesting video about cuneiform. I sometimes keep related thoughts in
         <a href="/notes/">notes</a>.
       {{ end }}

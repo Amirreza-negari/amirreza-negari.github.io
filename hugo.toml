@@ -9,7 +9,7 @@ defaultContentLanguageInSubdir = false
 [params]
   env = "production"
   author = "Amirreza Negari"
-  description = "Amirreza Negari is a theoretical physicist and postdoctoral fellow at the Institute for Quantum Computing in the Quantum Interactions Theory Group led by Christine Muschik."
+  description = "Amirreza Negari is a theoretical physicist and postdoctoral fellow at the Institute for Quantum Computing in the Quantum Interactions Theory Group."
   keywords = ["Amirreza Negari", "Amir-Reza Negari", "theoretical physicist", "Institute for Quantum Computing", "Quantum Interactions Theory Group", "quantum information", "quantum matter", "quantum error correction", "entanglement theory", "fermionic Gaussian states"]
   images = ["/images/profile/amirreza-negari-profile-photo.jpg"]
   defaultTheme = "dark"
@@ -92,7 +92,8 @@ defaultContentLanguageInSubdir = false
 
     [languages.fa.params]
       author = "امیررضا نگاری"
-      description = "امیررضا نگاری فیزیک‌دان نظری و پژوهشگر پسادکتری در مؤسسه محاسبات کوانتومی دانشگاه واترلو و گروه برهم‌کنش‌های کوانتومی کریستین موشیک است."
+      DateFormat = ":date_long"
+      description = "امیررضا نگاری فیزیک‌دان نظری و پژوهشگر پسادکتری در مؤسسه محاسبات کوانتومی دانشگاه واترلو و عضو گروه برهم‌کنش‌های کوانتومی است."
       keywords = ["امیررضا نگاری", "امیر رضا نگاری", "امیر-رضا نگاری", "فیزیک‌دان نظری", "پژوهشگر پسادکتری", "مؤسسه محاسبات کوانتومی", "دانشگاه واترلو", "گروه برهم‌کنش‌های کوانتومی", "اطلاعات کوانتومی", "ماده کوانتومی", "تصحیح خطای کوانتومی", "درهم‌تنیدگی", "حالت‌های گاوسی فرمیونی"]
       images = ["/images/profile/amirreza-negari-profile-photo.jpg"]
 

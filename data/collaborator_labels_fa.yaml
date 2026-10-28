@@ -1,0 +1,40 @@
+# Display translations only; affiliations, order, papers, and coordinates come
+# from the shared collaborator list in layouts/section/collaborators.html.
+roles:
+  Postdoctoral fellow: پژوهشگر پسادکتری
+  Postdoctoral researcher: پژوهشگر پسادکتری
+  Faculty member: عضو هیئت علمی
+  Professor: استاد
+  Assistant professor: استادیار
+  Research scientist: پژوهشگر
+  Researcher: پژوهشگر
+  Ada Lovelace Fellow: پژوهشگر بورسیهٔ آدا لاولیس
+  Graduate researcher: پژوهشگر تحصیلات تکمیلی
+  PhD student: دانشجوی دکتری
+  Coauthor: هم‌نویسنده
+regions:
+  Canada: کانادا
+  Iran: ایران
+  United Kingdom: بریتانیا
+  United States: ایالات متحدهٔ آمریکا
+  Germany: آلمان
+  Finland / Hungary: فنلاند / مجارستان
+places:
+  Institute for Quantum Computing, University of Waterloo: مؤسسهٔ محاسبات کوانتومی، دانشگاه واترلو
+  Perimeter Institute / University of Waterloo: مؤسسهٔ پریمیتر / دانشگاه واترلو
+  Perimeter Institute, Waterloo: مؤسسهٔ پریمیتر، واترلو
+  Sharif University of Technology, Tehran: دانشگاه صنعتی شریف، تهران
+  University of Waterloo / Perimeter Institute: دانشگاه واترلو / مؤسسهٔ پریمیتر
+  University of Cambridge: دانشگاه کمبریج
+  Purdue University, West Lafayette: دانشگاه پردو، وست لافایت
+  Kharazmi University, Tehran: دانشگاه خوارزمی، تهران
+  University of Alberta, Edmonton: دانشگاه آلبرتا، ادمونتون
+  Quantinuum, Cambridge: کوانتینیوم، کمبریج
+  Pasargad Institute for Advanced Innovative Solutions, Tehran: مؤسسهٔ راهکارهای نوآورانهٔ پیشرفتهٔ پاسارگاد، تهران
+  Dahlem Center for Complex Quantum Systems, Freie Universität Berlin: مرکز دالم برای سامانه‌های کوانتومی پیچیده، دانشگاه آزاد برلین
+  University of Toronto: دانشگاه تورنتو
+  University of Helsinki / Wigner Research Centre / Algorithmiq: دانشگاه هلسینکی / مرکز پژوهشی ویگنر / الگوریتمیک
+  Massachusetts Institute of Technology, Cambridge: مؤسسهٔ فناوری ماساچوست، کمبریج
+  Stanford University / Google DeepMind: دانشگاه استنفورد / گوگل دیپ‌مایند
+  Freie Universität Berlin / Helmholtz-Zentrum Berlin: دانشگاه آزاد برلین / مرکز هلمهولتز برلین
+  Institute for Quantum Computing, University of Waterloo / Perimeter Institute: مؤسسهٔ محاسبات کوانتومی، دانشگاه واترلو / مؤسسهٔ پریمیتر

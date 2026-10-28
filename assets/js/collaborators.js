@@ -123,6 +123,14 @@
       maxBoundsViscosity: 1,
       attributionControl: false
     });
+    for (const [selector, title] of [
+      [".leaflet-control-zoom-in", mapElement.dataset.zoomIn],
+      [".leaflet-control-zoom-out", mapElement.dataset.zoomOut]
+    ]) {
+      const control = mapElement.querySelector(selector);
+      control.title = title;
+      control.setAttribute("aria-label", title);
+    }
 
     // This local vector image replaces hosted tiles; no API keys or network provider.
     const basemap = L.imageOverlay(mapElement.dataset.mapImage, worldBounds);

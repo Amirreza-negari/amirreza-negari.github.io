@@ -148,7 +148,7 @@
         <div class="research-papers">
           <span>{{ if $isFa }}مقاله‌های مرتبط{{ else }}Related papers{{ end }}</span>
           {{- range $direction.papers }}
-          <a href="{{ .url }}">{{ .title }}</a>
+          <a href="{{ .url }}" lang="en" dir="ltr">{{ .title }}</a>
           {{- end }}
         </div>
       </div>

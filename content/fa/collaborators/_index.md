@@ -1,5 +1,5 @@
 ---
-title: "Collaborators"
+title: "همکاران"
 ---
 
-This map shows where my collaborators are based and the papers we have written together.
+این نقشه محل فعالیت همکارانم و مقاله‌هایی را که با هم نوشته‌ایم نشان می‌دهد.

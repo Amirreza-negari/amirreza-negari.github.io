@@ -1,0 +1,19 @@
+{{- $cv := hugo.Data.cv }}
+{{- $isFa := eq .Lang "fa" }}
+
+<section class="cv-document-page">
+  <header class="cv-document-header">
+    <h1>{{ if $isFa }}رزومه{{ else }}Curriculum vitae{{ end }}</h1>
+    <nav class="cv-document-actions" aria-label="{{ if $isFa }}فایل رزومه{{ else }}CV document{{ end }}">
+      <a href="{{ $cv.download }}">{{ if $isFa }}باز کردن PDF{{ else }}Open PDF{{ end }}</a>
+      <a href="{{ $cv.download }}" download="Amir-Reza_Negari_CV.pdf" type="application/pdf">{{ if $isFa }}دریافت فایل{{ else }}Download{{ end }}</a>
+    </nav>
+  </header>
+
+  <object class="cv-document-viewer" data="{{ $cv.download }}#view=FitH&amp;navpanes=0"
+    type="application/pdf" title="{{ if $isFa }}امیررضا نگاری — رزومه (PDF){{ else }}{{ $cv.name.en }} — Curriculum vitae (PDF){{ end }}" tabindex="0">
+    <p class="cv-document-fallback">
+      {{ if $isFa }}برای خواندن رزومه در مرورگر، <a href="{{ $cv.download }}">فایل PDF را باز کنید</a>.{{ else }}<a href="{{ $cv.download }}">Open the CV as a PDF</a> to read it in your browser.{{ end }}
+    </p>
+  </object>
+</section>

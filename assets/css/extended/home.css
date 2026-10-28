@@ -1,12 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,650&family=Vazirmatn:wght@400;500;600;700&display=swap");
 
 :root {
-  --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-display: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-latin-body: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-latin-display: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-body: var(--font-latin-body);
+  --font-display: var(--font-latin-display);
   --font-fa: "Vazirmatn", Tahoma, Arial, sans-serif;
   --soft-border: color-mix(in srgb, var(--border) 78%, var(--primary) 22%);
   --quiet-surface: color-mix(in srgb, var(--entry) 92%, var(--code-bg) 8%);
   --link-surface: color-mix(in srgb, var(--primary) 7%, transparent);
+}
+
+html[lang="fa"] {
+  --font-body: var(--font-fa);
+  --font-display: var(--font-fa);
+}
+
+html[lang="fa"] .eyebrow,
+html[lang="fa"] .collab-joint-label,
+html[lang="fa"] .hero-text h1 {
+  letter-spacing: normal;
+}
+
+html[lang="fa"] h1:not([lang="en"]),
+html[lang="fa"] h2:not([lang="en"]),
+html[lang="fa"] h3:not([lang="en"]),
+html[lang="fa"] .focus-card-title {
+  line-height: 1.5;
+}
+
+html[lang="fa"] [lang="en"] {
+  --font-body: var(--font-latin-body);
+  --font-display: var(--font-latin-display);
+  font-family: var(--font-body);
+}
+
+html[lang="fa"] h2[lang="en"],
+html[lang="fa"] h3[lang="en"] {
+  font-family: var(--font-display);
+}
+
+html[lang="fa"] [lang="fa"] {
+  --font-body: var(--font-fa);
+  --font-display: var(--font-fa);
+  font-family: var(--font-fa);
 }
 
 body {
@@ -145,8 +182,8 @@ h3 {
   font-size: 0.94rem;
 }
 
-/* Keep the English introduction consistent and give each part room to breathe. */
-html[lang="en"] .hero-text {
+/* Use the same introduction and spacing in both languages. */
+html .hero-text {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -154,7 +191,7 @@ html[lang="en"] .hero-text {
   font-family: var(--font-body);
 }
 
-html[lang="en"] .hero-text h1 {
+html .hero-text h1 {
   margin: 0;
   font-family: inherit;
   font-size: clamp(1.75rem, 4vw, 3rem);
@@ -163,8 +200,8 @@ html[lang="en"] .hero-text h1 {
   letter-spacing: -0.025em;
 }
 
-html[lang="en"] .hero-text .hero-description,
-html[lang="en"] .hero-text .hero-links {
+html .hero-text .hero-description,
+html .hero-text .hero-links {
   margin: 0;
   font-family: inherit;
   font-size: 1rem;
@@ -216,8 +253,8 @@ html[lang="en"] .hero-text .hero-links {
 }
 
 .hero-card {
-  border-left: 1px solid var(--soft-border);
-  padding-left: clamp(1.2rem, 3vw, 2rem);
+  border-inline-start: 1px solid var(--soft-border);
+  padding-inline-start: clamp(1.2rem, 3vw, 2rem);
 }
 
 .profile-photo {
@@ -227,10 +264,6 @@ html[lang="en"] .hero-text .hero-links {
   border-radius: 8px;
   display: block;
   margin-bottom: 1rem;
-}
-
-html[lang="fa"] .profile-photo {
-  transform: scaleX(-1);
 }
 
 .hero-card p {
@@ -379,7 +412,7 @@ html[lang="fa"] .profile-photo {
   background: var(--quiet-surface);
 }
 
-html[lang="en"] .glance-grid .theme-card h3 {
+.glance-grid .theme-card h3 {
   margin: 0 0 0.6rem;
 }
 
@@ -537,6 +570,21 @@ html[lang="en"] .glance-grid .theme-card h3 {
 
 html[lang="fa"] .focus-card-back .focus-card-title {
   text-align: right;
+}
+
+/* Let Persian copy set the card height instead of clipping longer translations. */
+html[lang="fa"] .focus-flip-card {
+  aspect-ratio: auto;
+}
+
+html[lang="fa"] .focus-card-inner {
+  display: grid;
+}
+
+html[lang="fa"] .focus-card-face {
+  position: relative;
+  inset: auto;
+  grid-area: 1 / 1;
 }
 
 .focus-card-copy {
@@ -1658,7 +1706,7 @@ html[lang="fa"] .post-content blockquote p:last-child {
   font-weight: 750;
 }
 
-/* English CV: a minimal header and the original PDF. */
+/* Both languages share a minimal header and the same PDF. */
 .cv-document-page {
   max-width: 1040px;
   margin-inline: auto;
@@ -1738,8 +1786,8 @@ html[lang="fa"] .post-content blockquote p:last-child {
     order: -1;
     width: 100%;
     max-width: 420px;
-    padding-left: 0;
-    border-left: 0;
+    padding-inline-start: 0;
+    border-inline-start: 0;
     margin: 0 auto;
   }
 

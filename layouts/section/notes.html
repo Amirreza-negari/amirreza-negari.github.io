@@ -10,7 +10,7 @@
     <h1>{{ .Title }}</h1>
     <div class="post-description">
       {{ if $isFa }}
-        چند یادداشت کوتاه
+        یادداشت‌های کوتاه و غیررسمی دربارهٔ ایده‌هایی که می‌خواهم بیشتر به آن‌ها فکر کنم.
       {{ else }}
         Short, informal notes on ideas I want to keep thinking through.
       {{ end }}
@@ -21,7 +21,7 @@
   <div class="notes-list">
     {{- range $notes }}
     <article>
-      <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+      <span>{{ if $isFa }}{{ time.Format ":date_long" .Date }}{{ else }}{{ .Date.Format "Jan 2, 2006" }}{{ end }}</span>
       <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
       {{- with .Description }}
       <p>{{ . }}</p>

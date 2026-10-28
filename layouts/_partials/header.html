@@ -36,7 +36,7 @@
             {{- if $lsenabled }}
             <div class="logo-switches">
                 {{- if (not site.Params.disableThemeToggle) }}
-                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="{{ if eq .Lang "fa" }}تغییر پوستهٔ روشن و تیره{{ else }}Toggle theme{{ end }}">
                     <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -63,23 +63,17 @@
                     {{- $separator := or $label_text (not site.Params.disableThemeToggle)}}
                     {{- if $separator }}<span class="nav-sep">|</span>{{ end }}
                     <ul class="lang-menu">
-                        {{- if eq $lang "fa" }}
-                        <li>
-                            {{- $target := strings.TrimPrefix "/fa" .RelPermalink }}
-                            {{- if eq $target "" }}{{ $target = "/" }}{{ end }}
-                            <a href="{{- $target -}}" title="EN" aria-label="EN">
-                                EN
-                            </a>
-                        </li>
-                        {{- else }}
-                        <li>
-                            {{- $target := cond (eq .RelPermalink "/") "/fa/" (printf "/fa%s" .RelPermalink) }}
-                            {{- if and .IsPage (eq .Section "notes") }}{{ $target = "/fa/notes/" }}{{ end }}
-                            <a href="{{- $target -}}" title="فارسی" aria-label="فارسی">
-                                فارسی
-                            </a>
-                        </li>
+                        {{- $label := cond (eq $lang "fa") "EN" "فارسی" }}
+                        {{- $target := cond (eq $lang "fa") "/" "/fa/" }}
+                        {{- if .Section }}
+                          {{- $target = printf "%s%s/" $target .Section }}
                         {{- end }}
+                        {{- range .Translations }}
+                          {{- $target = .RelPermalink }}
+                        {{- end }}
+                        <li>
+                            <a href="{{ $target }}" title="{{ $label }}" aria-label="{{ $label }}">{{ $label }}</a>
+                        </li>
                     </ul>
                 {{- end }}
             </div>

@@ -1,6 +1,6 @@
 {{- define "main" }}
 
-{{- $isEn := eq .Lang "en" }}
+{{- $isFa := eq .Lang "fa" }}
 
 {{- $papers := slice
   (dict "title" "Instability of Markov chains under infinitesimal coherent dissipation" "authors" "Amir-Reza Negari, Yijian Zou, Timothy H. Hsieh" "year" "2026" "status" "Preprint" "links" (slice (dict "label" "arXiv" "url" "https://arxiv.org/abs/2610.18983")))
@@ -21,43 +21,22 @@
 <section class="papers-page">
   <header class="page-header papers-header">
     {{- partial "breadcrumbs.html" . }}
-    {{ if not $isEn }}<p class="eyebrow">Publications</p>{{ end }}
-    <h1>Papers</h1>
+    <h1>{{ .Title }}</h1>
     <div class="post-description">
-      A selected list of papers and preprints. My name is highlighted in the author lists.
+      {{ if $isFa }}فهرستی از مقاله‌ها و پیش‌چاپ‌ها. نام من در فهرست نویسندگان مشخص شده است.{{ else }}A selected list of papers and preprints. My name is highlighted in the author lists.{{ end }}
     </div>
   </header>
-
-  {{ if not $isEn }}
-  <div class="papers-overview">
-    <article>
-      <span>Total</span>
-      <strong>{{ len $papers }}</strong>
-      <p>papers and preprints</p>
-    </article>
-    <article>
-      <span>Recent</span>
-      <strong>2026</strong>
-      <p>latest preprints</p>
-    </article>
-    <article>
-      <span>Profiles</span>
-      <strong><a href="https://scholar.google.com/citations?user=_kyHGUcAAAAJ&hl=en">Scholar</a></strong>
-      <p><a href="https://inspirehep.net/authors/2851625?ui-citation-summary=true">INSPIRE-HEP</a></p>
-    </article>
-  </div>
-  {{ end }}
 
   <div class="paper-showcase">
     {{- range $index, $paper := $papers }}
     <article class="paper-publication">
-      <div class="paper-number">{{ printf "%02d" (cond $isEn (sub (len $papers) $index) (add $index 1)) }}</div>
-      <div class="paper-body">
+      <div class="paper-number">{{ printf "%02d" (sub (len $papers) $index) }}</div>
+      <div class="paper-body" lang="en" dir="ltr">
         <div class="paper-meta-row">
           <span>{{ $paper.year }}</span>
-          <span>{{ $paper.status }}</span>
+          <span>{{ if and $isFa (eq $paper.status "Preprint") }}<span lang="fa" dir="rtl">پیش‌چاپ</span>{{ else }}{{ $paper.status }}{{ end }}</span>
         </div>
-        <h2>{{ $paper.title }}</h2>
+        <h2 lang="en">{{ $paper.title }}</h2>
         <p>{{ replace $paper.authors "Amir-Reza Negari" "<strong>Amir-Reza Negari</strong>" | safeHTML }}</p>
         <div class="paper-actions">
           {{- range $paper.links }}

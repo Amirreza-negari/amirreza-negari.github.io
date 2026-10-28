@@ -27,6 +27,20 @@
 -}}
 
 {{- $isFa := eq .Lang "fa" }}
+{{- if $isFa }}
+  {{- $labels := hugo.Data.collaborator_labels_fa }}
+  {{- $localized := slice }}
+  {{- range $collaborators }}
+    {{- $localized = $localized | append (dict
+      "name" (cond (eq .self true) "امیررضا نگاری" .name)
+      "role" (index $labels.roles .role | default .role)
+      "place" (index $labels.places .place | default .place)
+      "region" (index $labels.regions .region | default .region)
+      "lat" .lat "lng" .lng "self" .self "link" .link "work" .work
+    ) }}
+  {{- end }}
+  {{- $collaborators = $localized }}
+{{- end }}
 {{- $mapURL := "images/maps/world.svg" | relURL }}
 <link rel="stylesheet" href="{{ "vendor/leaflet/leaflet.css" | relURL }}">
 
@@ -56,9 +70,9 @@
           </a>
           {{- end }}
         </svg>
-        <div id="collab-world-map" class="world-map" data-map-image="{{ $mapURL }}" aria-label="{{ if $isFa }}نقشهٔ تعاملی همکاران{{ else }}Interactive collaborator map{{ end }}" hidden></div>
+        <div id="collab-world-map" class="world-map" data-map-image="{{ $mapURL }}" data-zoom-in="{{ if $isFa }}بزرگ‌نمایی{{ else }}Zoom in{{ end }}" data-zoom-out="{{ if $isFa }}کوچک‌نمایی{{ else }}Zoom out{{ end }}" aria-label="{{ if $isFa }}نقشهٔ تعاملی همکاران{{ else }}Interactive collaborator map{{ end }}" hidden></div>
       </div>
-      <p class="map-credit">Map: <a href="https://www.naturalearthdata.com/">Natural Earth</a></p>
+      <p class="map-credit">{{ if $isFa }}نقشه:{{ else }}Map:{{ end }} <a href="https://www.naturalearthdata.com/" lang="en" dir="ltr">Natural Earth</a></p>
     </div>
 
     <aside id="collab-detail" class="collab-detail" data-collab-detail aria-live="polite" aria-atomic="true">
@@ -71,7 +85,7 @@
     <details data-collab-card data-index="{{ $index }}" data-name="{{ $person.name }}" data-place="{{ $person.place }}" data-lat="{{ $person.lat }}" data-lng="{{ $person.lng }}">
       <summary id="collaborator-{{ $index }}">
         <span>{{ printf "%02d" $index }}</span>
-        <div><h3>{{ $person.name }}</h3><p>{{ $person.place }}</p></div>
+        <div><h3 dir="auto">{{ $person.name }}</h3><p>{{ $person.place }}</p></div>
       </summary>
       <div class="collab-card-detail" data-person-detail>
         {{- partial "collaborator-detail.html" (dict "person" $person "isFa" $isFa) }}

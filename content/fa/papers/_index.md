@@ -1,112 +1,123 @@
 ---
-title: "Papers"
+title: "مقالات"
 ---
 
-A selected list of papers and preprints.
+فهرستی از مقاله‌ها و پیش‌چاپ‌ها.
 
-## Publications
+## مقالات
 
 ### Instability of Markov chains under infinitesimal coherent dissipation
 
-**Authors:** **Amir-Reza Negari**, Yijian Zou, Timothy H. Hsieh
+**نویسندگان:** **Amir-Reza Negari**, Yijian Zou, Timothy H. Hsieh
 
-**Year:** 2026
+**سال:** 2026
 
-**Links:** [arXiv](https://arxiv.org/abs/2610.18983)
+**پیوندها:** [arXiv](https://arxiv.org/abs/2610.18983)
 
 ### Nonadditivity in fermionic quantum Shannon theory
 
-**Authors:** Farzin Salek, **Amir-Reza Negari**, Graeme Smith, Jens Eisert, Debbie Leung
+**نویسندگان:** Farzin Salek, **Amir-Reza Negari**, Graeme Smith, Jens Eisert, Debbie Leung
 
-**Year:** 2026
+**سال:** 2026
 
-**Links:** [arXiv](https://arxiv.org/abs/2610.06758)
+**پیوندها:** [arXiv](https://arxiv.org/abs/2610.06758)
 
 ### Entanglement of purification for Werner states: canonical purification and nonadditivity
 
-**Authors:** Zahra Baghali Khanian, **Amir-Reza Negari**
+**نویسندگان:** Zahra Baghali Khanian, **Amir-Reza Negari**
 
-**Year:** 2026
+**سال:** 2026
 
-**Links:** [arXiv](https://arxiv.org/abs/2610.03630)
+**پیوندها:** [arXiv](https://arxiv.org/abs/2610.03630)
 
 ### Approximation theorems for fermionic Gaussian states
 
-**Authors:** **Amir-Reza Negari**, Farzin Salek, Zoltán Zimborás, Aram Harrow, Patrick Hayden, Jens Eisert
+**نویسندگان:** **Amir-Reza Negari**, Farzin Salek, Zoltán Zimborás, Aram Harrow, Patrick Hayden, Jens Eisert
 
-**Year:** 2026
+**سال:** 2026
 
-**Links:** [arXiv](https://arxiv.org/abs/2610.01860)
+**پیوندها:** [arXiv](https://arxiv.org/abs/2610.01860)
 
 ### Rényi Entanglement of Purification Is Non-additive
 
-**Authors:** **Amir-Reza Negari**, Zahra Baghali Khanian
+**نویسندگان:** **Amir-Reza Negari**, Zahra Baghali Khanian
 
-**Year:** 2026
+**سال:** 2026
 
-**Links:** [arXiv](https://arxiv.org/abs/2608.28897)
+**پیوندها:** [arXiv](https://arxiv.org/abs/2608.28897)
 
 ### Extendibility of Fermionic Gaussian States
 
-**Authors:** **Amir-Reza Negari**, Farzin Salek
+**نویسندگان:** **Amir-Reza Negari**, Farzin Salek
 
-**Journal:** Physical Review Letters 137, 080201
+**نشریه:** Physical Review Letters 137, 080201
 
-**Year:** 2026
+**سال:** 2026
 
-**Links:** [arXiv](https://arxiv.org/abs/2508.18532) · [DOI](https://doi.org/10.1103/65dd-448y)
+**پیوندها:** [arXiv](https://arxiv.org/abs/2508.18532) · [DOI](https://doi.org/10.1103/65dd-448y)
 
 ### Symmetry enforcing entanglement at high temperatures
 
-**Authors:** **Amir-Reza Negari**, Leonardo A. Lessa, Subhayan Sahu
+**نویسندگان:** **Amir-Reza Negari**, Leonardo A. Lessa, Subhayan Sahu
 
-**Journal:** Physical Review A 114, 022458
+**نشریه:** Physical Review A 114, 022458
 
-**Year:** 2026
+**سال:** 2026
 
-**Links:** [arXiv](https://arxiv.org/abs/2508.20166) · [DOI](https://doi.org/10.1103/rckt-3lfm)
+**پیوندها:** [arXiv](https://arxiv.org/abs/2508.20166) · [DOI](https://doi.org/10.1103/rckt-3lfm)
 
 ### Unlearnable phases of matter
 
-**Authors:** Tarun Advaith Kumar, Yijian Zou, **Amir-Reza Negari**, Roger G. Melko, Timothy H. Hsieh  
-**Year:** 2026
+**نویسندگان:** Tarun Advaith Kumar, Yijian Zou, **Amir-Reza Negari**, Roger G. Melko, Timothy H. Hsieh
 
-**Links:** [arXiv](https://arxiv.org/abs/2602.11262)
+**سال:** 2026
+
+**پیوندها:** [arXiv](https://arxiv.org/abs/2602.11262)
 
 ### Critical non-equilibrium phases from noisy topological memories
 
-**Authors:** **Amir-Reza Negari**, Subhayan Sahu, Jan Behrends, Benjamin Béri, Timothy H. Hsieh  
-**Year:** 2026
+**نویسندگان:** **Amir-Reza Negari**, Subhayan Sahu, Jan Behrends, Benjamin Béri, Timothy H. Hsieh
 
-**Links:** [arXiv](https://arxiv.org/abs/2601.10792)
+**سال:** 2026
+
+**پیوندها:** [arXiv](https://arxiv.org/abs/2601.10792)
 
 ### Spacetime Markov length: A diagnostic for fault tolerance via mixed-state phases
 
-**Authors:** **Amir-Reza Negari**, Tyler D. Ellison, Timothy H. Hsieh
+**نویسندگان:** **Amir-Reza Negari**, Tyler D. Ellison, Timothy H. Hsieh
 
-**Journal:** Physical Review B 114, 045130
+**نشریه:** Physical Review B 114, 045130
 
-**Year:** 2026
+**سال:** 2026
 
-**Links:** [arXiv](https://arxiv.org/abs/2412.00193) · [DOI](https://doi.org/10.1103/61wf-zx39)
+**پیوندها:** [arXiv](https://arxiv.org/abs/2412.00193) · [DOI](https://doi.org/10.1103/61wf-zx39)
 
 ### Measurement-induced phase transitions in the toric code
 
-**Authors:** **Amir-Reza Negari**, Subhayan Sahu, Timothy H. Hsieh  
-**Journal:** Physical Review B 109, 125148  
-**Year:** 2024  
-**Links:** [arXiv](https://arxiv.org/abs/2307.02292) · [DOI](https://doi.org/10.1103/PhysRevB.109.125148)
+**نویسندگان:** **Amir-Reza Negari**, Subhayan Sahu, Timothy H. Hsieh
+
+**نشریه:** Physical Review B 109, 125148
+
+**سال:** 2024
+
+**پیوندها:** [arXiv](https://arxiv.org/abs/2307.02292) · [DOI](https://doi.org/10.1103/PhysRevB.109.125148)
 
 ### Chiral Ising Gross-Neveu criticality of a single Dirac cone: A quantum Monte Carlo study
 
-**Authors:** S. Mojtaba Tabatabaei, **Amir-Reza Negari**, Joseph Maciejko, Abolhassan Vaezi  
-**Journal:** Physical Review Letters 128, 225701  
-**Year:** 2022  
-**Links:** [arXiv](https://arxiv.org/abs/2112.09209) · [DOI](https://doi.org/10.1103/PhysRevLett.128.225701)
+**نویسندگان:** S. Mojtaba Tabatabaei, **Amir-Reza Negari**, Joseph Maciejko, Abolhassan Vaezi
+
+**نشریه:** Physical Review Letters 128, 225701
+
+**سال:** 2022
+
+**پیوندها:** [arXiv](https://arxiv.org/abs/2112.09209) · [DOI](https://doi.org/10.1103/PhysRevLett.128.225701)
 
 ### An Amelioration for the Sign Problem: Adiabatic Quantum Monte Carlo
 
-**Authors:** Mohammad-Sadegh Vaezi, **Amir-Reza Negari**, Amin Moharramipour, Abolhassan Vaezi  
-**Journal:** Physical Review Letters 127, 217003  
-**Year:** 2021  
-**Links:** [arXiv](https://arxiv.org/abs/2012.12911) · [DOI](https://doi.org/10.1103/PhysRevLett.127.217003)
+**نویسندگان:** Mohammad-Sadegh Vaezi, **Amir-Reza Negari**, Amin Moharramipour, Abolhassan Vaezi
+
+**نشریه:** Physical Review Letters 127, 217003
+
+**سال:** 2021
+
+**پیوندها:** [arXiv](https://arxiv.org/abs/2012.12911) · [DOI](https://doi.org/10.1103/PhysRevLett.127.217003)
