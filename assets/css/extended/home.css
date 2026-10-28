@@ -1653,6 +1653,282 @@ html[lang="fa"] .post-content blockquote p:last-child {
   font-weight: 750;
 }
 
+/* English CV: retain the boxed layout with one typeface and clearer hierarchy. */
+.cv-readable {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.cv-readable h1,
+.cv-readable h2,
+.cv-readable h3 {
+  font-family: inherit;
+  font-weight: 500;
+}
+
+.cv-readable .cv-header {
+  margin-bottom: 1.75rem;
+  text-align: left;
+}
+
+.cv-readable .cv-header h1 {
+  font-size: clamp(1.9rem, 4vw, 2.65rem);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin: 0 0 1rem;
+}
+
+.cv-readable .cv-position {
+  margin: 0;
+}
+
+.cv-readable .cv-intro {
+  color: var(--secondary);
+  margin: 0.35rem 0 0;
+}
+
+.cv-readable a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.cv-readable a:focus-visible,
+.cv-readable summary:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+}
+
+.cv-readable .cv-contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 1.25rem;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}
+
+.cv-readable .cv-contact-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.cv-readable .cv-pdf {
+  gap: 0.3em;
+  padding: 0.5rem 0.85rem;
+  margin-inline-start: auto;
+  border: 1px solid var(--soft-border);
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.cv-readable .cv-pdf:hover {
+  border-color: var(--primary);
+}
+
+.cv-readable .cv-pdf span {
+  color: var(--secondary);
+}
+
+.cv-readable .cv-layout {
+  align-items: start;
+  gap: 1.15rem;
+}
+
+.cv-readable .cv-section {
+  min-width: 0;
+  padding: 1.5rem;
+}
+
+.cv-readable .cv-section h2 {
+  font-size: 1.25rem;
+  line-height: 1.35;
+  margin: 0 0 1.25rem;
+}
+
+.cv-readable .cv-section h3 {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0 0 0.35rem;
+}
+
+.cv-readable .cv-facts {
+  display: grid;
+  gap: 1.15rem;
+  margin: 0;
+}
+
+.cv-readable .cv-facts dt {
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.cv-readable .cv-facts dd {
+  margin: 0.25rem 0 0;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+.cv-readable .cv-note {
+  display: block;
+  color: var(--secondary);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-top: 0.25rem;
+}
+
+.cv-readable .cv-award-list,
+.cv-readable .cv-talk-list,
+.cv-readable .cv-selected-papers {
+  display: grid;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cv-readable .cv-section li {
+  color: var(--primary);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.cv-readable .cv-award-list strong {
+  font-weight: 500;
+}
+
+.cv-readable .cv-section .cv-subheading {
+  margin-top: 1.4rem;
+  font-size: 0.9375rem;
+}
+
+.cv-readable .cv-funding {
+  padding-inline-start: 1.1rem;
+}
+
+.cv-readable .cv-funding li {
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.cv-readable .cv-timeline {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.cv-readable .cv-timeline article {
+  min-width: 0;
+  padding-top: 0.85rem;
+}
+
+.cv-readable .cv-timeline .cv-date {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+}
+
+.cv-readable .cv-timeline h3 {
+  margin: 0.45rem 0;
+}
+
+.cv-readable .cv-timeline p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.cv-readable .cv-timeline .cv-note {
+  font-size: 0.8125rem;
+  margin-top: 0.5rem;
+}
+
+.cv-readable .cv-research-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.cv-readable .cv-research-heading h2 {
+  margin: 0;
+}
+
+.cv-readable .cv-research-heading > a,
+.cv-readable .cv-publication-count {
+  font-size: 0.875rem;
+}
+
+.cv-readable .cv-publication-count {
+  color: var(--secondary);
+  margin: 0 0 1.25rem;
+}
+
+.cv-readable .cv-additional-talks {
+  margin-top: 1.25rem;
+}
+
+.cv-readable .cv-additional-talks summary {
+  min-height: 44px;
+  padding-block: 0.65rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.cv-readable .cv-additional-talks summary span {
+  color: var(--secondary);
+}
+
+.cv-readable .cv-additional-talks[open] .cv-talk-list {
+  margin-top: 0.75rem;
+}
+
+@media (max-width: 1000px) {
+  .cv-readable .cv-timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .cv-readable .cv-section {
+    padding: 1.15rem;
+  }
+
+  .cv-readable .cv-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-readable .cv-pdf {
+    margin-inline-start: 0;
+  }
+}
+
+@media print {
+  .cv-readable .cv-contact-links,
+  .cv-readable .breadcrumbs,
+  .cv-readable .cv-additional-talks summary {
+    display: none;
+  }
+
+  .cv-readable .cv-section {
+    break-inside: avoid;
+  }
+
+  .cv-readable .cv-additional-talks::details-content {
+    display: block;
+    content-visibility: visible;
+  }
+
+  .cv-readable .cv-additional-talks .cv-talk-list {
+    display: grid;
+  }
+}
+
 @media (max-width: 850px) {
   .main {
     max-width: 720px;

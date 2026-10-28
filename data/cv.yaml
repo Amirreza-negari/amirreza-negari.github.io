@@ -22,19 +22,20 @@ skills:
       fa: پایتون
     items: [JAX, PyTorch, CuPy, Numba CUDA]
   - title:
-      en: Programming
+      en: Other languages
       fa: برنامه‌نویسی
     items: [C/C++, CUDA, Julia, MATLAB]
   - title:
-      en: Computing
+      en: Scientific computing
       fa: محاسبات
     items:
       - en: GPU/CPU parallel programming
         fa: برنامه‌نویسی موازی GPU/CPU
       - en: Distributed computing
         fa: محاسبات توزیع‌شده
+      - en: High-performance computing (HPC)
+        fa: محاسبات با کارایی بالا (HPC)
       - Slurm
-      - HPC
   - title:
       en: Methods
       fa: روش‌ها
@@ -47,7 +48,7 @@ skills:
         fa: روش‌های گاوسی
       - en: Stabilizer simulation
         fa: شبیه‌سازی پایدارسازها
-      - en: QEC decoders
+      - en: Quantum error-correction decoders
         fa: رمزگشاهای تصحیح خطای کوانتومی
 publications:
   - title: Extendibility of Fermionic Gaussian States
@@ -144,7 +145,7 @@ community:
       en: Mentored a Perimeter Scholars International student (2023–2025) and supervised a high-school research group through Perimeter’s ISSYP program.
       fa: راهنمایی یک دانشجوی برنامه‌ی PSI در سال‌های ۲۰۲۳–۲۰۲۵ و سرپرستی یک گروه پژوهشی دانش‌آموزی در برنامه‌ی ISSYP پریمیتر.
   - title:
-      en: Research community
+      en: Reading groups
       fa: جامعه‌ی پژوهشی
     body:
       en: Founded the Eureka Club and a biweekly Quantum Matter arXiv lunch; co-founded the Topological Quantum Club at Perimeter.

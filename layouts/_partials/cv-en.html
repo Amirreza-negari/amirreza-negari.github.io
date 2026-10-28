@@ -1,0 +1,115 @@
+{{- $cv := hugo.Data.cv }}
+
+<article class="cv-page cv-readable">
+  <header class="page-header cv-header">
+    {{- partial "breadcrumbs.html" . }}
+    <h1>{{ $cv.name.en }}</h1>
+    <p class="cv-position">Postdoctoral fellow · Institute for Quantum Computing, University of Waterloo</p>
+    <p class="cv-intro">Quantum information, quantum error correction, and statistical physics.</p>
+    <div class="cv-contact-links">
+      <a href="mailto:anegari@uwaterloo.ca">anegari@uwaterloo.ca</a>
+      <a href="https://scholar.google.com/citations?user=_kyHGUcAAAAJ&amp;hl=en">Google Scholar</a>
+      <a href="/papers/">Publications</a>
+      <a class="cv-pdf" href="{{ $cv.download }}" download="Amir-Reza_Negari_CV.pdf" type="application/pdf">Download CV <span>(PDF)</span></a>
+    </div>
+  </header>
+
+  <div class="cv-layout">
+    <section class="cv-section" aria-labelledby="cv-skills-title">
+      <h2 id="cv-skills-title">Technical skills</h2>
+      <dl class="cv-facts">
+        {{- range $cv.skills }}
+        <div>
+          <dt>{{ .title.en }}</dt>
+          <dd>{{ range $index, $skill := .items }}{{ if $index }}, {{ end }}{{ if reflect.IsMap $skill }}{{ $skill.en }}{{ else }}{{ $skill }}{{ end }}{{ end }}</dd>
+        </div>
+        {{- end }}
+      </dl>
+    </section>
+
+    <section class="cv-section" aria-labelledby="cv-awards-title">
+      <h2 id="cv-awards-title">Awards & recognition</h2>
+      <ul class="cv-award-list">
+        {{- range $cv.awards }}
+        <li>
+          <strong>{{ .title.en }}</strong>
+          <span class="cv-note">{{ .detail.en }}</span>
+        </li>
+        {{- end }}
+        <li>
+          <strong>Editors’ Suggestion · Physical Review Letters</strong>
+          <span class="cv-note"><a href="https://doi.org/10.1103/PhysRevLett.128.225701">Chiral Ising Gross–Neveu criticality of a single Dirac cone</a> · 2022</span>
+        </li>
+      </ul>
+      <h3 class="cv-subheading">Fellowships & scholarships</h3>
+      <ul class="cv-funding">
+        {{- range $cv.fellowships }}<li>{{ .en }}</li>{{ end }}
+      </ul>
+    </section>
+
+    <section class="cv-section cv-span" aria-labelledby="cv-career-title">
+      <h2 id="cv-career-title">Experience & education</h2>
+      <div class="cv-timeline">
+        {{- range $cv.career }}
+        <article>
+          <span class="cv-date">{{ .dates.en }}</span>
+          <h3>{{ .title.en }}</h3>
+          <p>{{ .institution.en }}</p>
+          {{- range .details }}<p class="cv-note">{{ .en }}</p>{{ end }}
+        </article>
+        {{- end }}
+      </div>
+    </section>
+
+    <section class="cv-section cv-span" aria-labelledby="cv-research-title">
+      <div class="cv-research-heading">
+        <h2 id="cv-research-title">Selected publications</h2>
+        <a href="/papers/">All papers and preprints</a>
+      </div>
+      <p class="cv-publication-count">Six peer-reviewed papers and seven preprints.</p>
+      <ul class="cv-selected-papers">
+        {{- range $cv.publications }}
+        <li>
+          <a href="{{ .url }}">{{ .title }}</a>
+          <span class="cv-note">{{ .note.en }}</span>
+        </li>
+        {{- end }}
+      </ul>
+    </section>
+
+    <section class="cv-section" aria-labelledby="cv-service-title">
+      <h2 id="cv-service-title">Teaching & service</h2>
+      <dl class="cv-facts">
+        {{- range $cv.community }}
+        <div>
+          <dt>{{ .title.en }}</dt>
+          <dd>{{ .body.en }}</dd>
+        </div>
+        {{- end }}
+      </dl>
+    </section>
+
+    <section class="cv-section" aria-labelledby="cv-talks-title">
+      <h2 id="cv-talks-title">Talks & posters</h2>
+      <ul class="cv-talk-list">
+        {{- range first 3 $cv.talks }}
+        <li>
+          {{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}<span>{{ .title }}</span>{{ end }}
+          <span class="cv-note">{{ .detail.en }}</span>
+        </li>
+        {{- end }}
+      </ul>
+      <details class="cv-additional-talks">
+        <summary>More talks and posters <span>({{ sub (len $cv.talks) 3 }})</span></summary>
+        <ul class="cv-talk-list">
+          {{- range after 3 $cv.talks }}
+          <li>
+            {{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}<span>{{ .title }}</span>{{ end }}
+            <span class="cv-note">{{ .detail.en }}</span>
+          </li>
+          {{- end }}
+        </ul>
+      </details>
+    </section>
+  </div>
+</article>
