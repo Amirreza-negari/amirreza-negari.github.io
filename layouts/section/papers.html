@@ -1,5 +1,7 @@
 {{- define "main" }}
 
+{{- $isEn := eq .Lang "en" }}
+
 {{- $papers := slice
   (dict "title" "Instability of Markov chains under infinitesimal coherent dissipation" "authors" "Amir-Reza Negari, Yijian Zou, Timothy H. Hsieh" "year" "2026" "status" "Preprint" "links" (slice (dict "label" "arXiv" "url" "https://arxiv.org/abs/2610.18983")))
   (dict "title" "Nonadditivity in fermionic quantum Shannon theory" "authors" "Farzin Salek, Amir-Reza Negari, Graeme Smith, Jens Eisert, Debbie Leung" "year" "2026" "status" "Preprint" "links" (slice (dict "label" "arXiv" "url" "https://arxiv.org/abs/2610.06758")))
@@ -19,13 +21,14 @@
 <section class="papers-page">
   <header class="page-header papers-header">
     {{- partial "breadcrumbs.html" . }}
-    <p class="eyebrow">Publications</p>
+    {{ if not $isEn }}<p class="eyebrow">Publications</p>{{ end }}
     <h1>Papers</h1>
     <div class="post-description">
       A selected list of papers and preprints. My name is highlighted in the author lists.
     </div>
   </header>
 
+  {{ if not $isEn }}
   <div class="papers-overview">
     <article>
       <span>Total</span>
@@ -43,11 +46,12 @@
       <p><a href="https://inspirehep.net/authors/2851625?ui-citation-summary=true">INSPIRE-HEP</a></p>
     </article>
   </div>
+  {{ end }}
 
   <div class="paper-showcase">
     {{- range $index, $paper := $papers }}
     <article class="paper-publication">
-      <div class="paper-number">{{ printf "%02d" (add $index 1) }}</div>
+      <div class="paper-number">{{ printf "%02d" (cond $isEn (sub (len $papers) $index) (add $index 1)) }}</div>
       <div class="paper-body">
         <div class="paper-meta-row">
           <span>{{ $paper.year }}</span>

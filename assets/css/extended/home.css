@@ -145,6 +145,33 @@ h3 {
   font-size: 0.94rem;
 }
 
+/* Keep the English introduction consistent and give each part room to breathe. */
+html[lang="en"] .hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 0;
+  font-family: var(--font-body);
+}
+
+html[lang="en"] .hero-text h1 {
+  margin: 0;
+  font-family: inherit;
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+html[lang="en"] .hero-text .hero-description,
+html[lang="en"] .hero-text .hero-links {
+  margin: 0;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
 .hero-links a,
 .paper-card a,
 .more-link a,
@@ -152,6 +179,40 @@ h3 {
   color: var(--primary);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.22em;
+}
+
+.hero-icon-links {
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-links.hero-icon-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  margin: 0;
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+.hero-icon-links a:hover {
+  color: var(--primary);
+}
+
+.hero-icon-links a:focus-visible {
+  color: var(--primary);
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.hero-icon-links svg {
+  display: block;
+  width: 24px;
+  height: 24px;
 }
 
 .hero-card {

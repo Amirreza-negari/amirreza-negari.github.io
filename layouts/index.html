@@ -23,14 +23,7 @@
         </p>
       </div>
     {{ else }}
-      <p class="eyebrow">Theoretical Physicist</p>
-
       <h1>Amirreza Negari</h1>
-
-      <p class="hero-subtitle">
-        I am a postdoctoral fellow at the Institute for Quantum Computing, working in
-        the Quantum Interactions Theory Group.
-      </p>
 
       <p class="hero-description">
         My work combines analytic ideas with numerical tools to understand the physics of
@@ -39,12 +32,15 @@
       </p>
     {{ end }}
 
+    {{ if $isFa }}
     <div class="hero-buttons">
       <a href="{{ if $isFa }}/fa/research/{{ else }}/research/{{ end }}">{{ if $isFa }}پژوهش{{ else }}Research{{ end }}</a>
       <a href="{{ if $isFa }}/fa/papers/{{ else }}/papers/{{ end }}">{{ if $isFa }}مقاله‌ها{{ else }}Papers{{ end }}</a>
       <a href="{{ if $isFa }}/fa/cv/{{ else }}/cv/{{ end }}">{{ if $isFa }}رزومه{{ else }}CV{{ end }}</a>
     </div>
+    {{ end }}
 
+    {{ if $isFa }}
     <div class="hero-links">
       <a href="mailto:anegari@uwaterloo.ca">{{ if $isFa }}ایمیل{{ else }}Email{{ end }}</a>
       <span>·</span>
@@ -54,14 +50,29 @@
       <span>·</span>
       <a href="https://inspirehep.net/authors/2851625?ui-citation-summary=true">{{ if $isFa }}این‌اسپایر{{ else }}INSPIRE{{ end }}</a>
       <span>·</span>
-      <a href="https://orcid.org/orcid-search/search?searchQuery=%22Amir-Reza%20Negari%22">{{ if $isFa }}ارکید{{ else }}ORCID{{ end }}</a>
+      <a href="https://orcid.org/0009-0007-1292-7187">{{ if $isFa }}ارکید{{ else }}ORCID{{ end }}</a>
     </div>
+    {{ else }}
+    <div class="hero-links hero-icon-links">
+      {{ range slice
+        (dict "name" "email" "label" "Email" "url" "mailto:anegari@uwaterloo.ca")
+        (dict "name" "github" "label" "GitHub" "url" "https://github.com/Amirreza-negari")
+        (dict "name" "googlescholar" "label" "Google Scholar" "url" "https://scholar.google.com/citations?user=_kyHGUcAAAAJ&hl=en")
+        (dict "name" "inspire" "label" "INSPIRE" "url" "https://inspirehep.net/authors/2851625?ui-citation-summary=true")
+        (dict "name" "orcid" "label" "ORCID" "url" "https://orcid.org/0009-0007-1292-7187")
+      }}
+      <a href="{{ .url }}" aria-label="{{ .label }}" title="{{ .label }}">
+        {{ partial "profile-icon.html" . }}
+      </a>
+      {{ end }}
+    </div>
+    {{ end }}
   </div>
 
   <div class="hero-card">
     <img class="profile-photo" src="/images/profile/amirreza-negari-profile-photo.jpg" alt="{{ if $isFa }}امیررضا نگاری، فیزیک‌دان نظری و پژوهشگر پسادکتری در مؤسسه محاسبات کوانتومی دانشگاه واترلو{{ else }}Amirreza Negari, theoretical physicist and postdoctoral fellow at the Institute for Quantum Computing{{ end }}">
     <p>
-      {{ if $isFa }}پژوهشگر پسادکتری در مؤسسه محاسبات کوانتومی دانشگاه واترلو.{{ else }}Postdoctoral fellow at the Institute for Quantum Computing.{{ end }}
+      {{ if $isFa }}پژوهشگر پسادکتری در مؤسسه محاسبات کوانتومی دانشگاه واترلو.{{ else }}I am a postdoctoral fellow at the Institute for Quantum Computing (IQC){{ end }}
     </p>
   </div>
 </section>
@@ -69,7 +80,7 @@
 <section class="section-block">
   <div class="section-header">
     <p class="eyebrow">{{ if $isFa }}پژوهش{{ else }}Research{{ end }}</p>
-    <h2>{{ if $isFa }}مسیرهای پژوهشی{{ else }}Research Directions{{ end }}</h2>
+    {{ if $isFa }}<h2>مسیرهای پژوهشی</h2>{{ end }}
   </div>
 
   <div class="focus-flip-grid">
@@ -239,7 +250,7 @@
 <section class="section-block">
   <div class="section-header">
     <p class="eyebrow">{{ if $isFa }}نمایه{{ else }}Profile{{ end }}</p>
-    <h2>{{ if $isFa }}در یک نگاه{{ else }}At a Glance{{ end }}</h2>
+    {{ if $isFa }}<h2>در یک نگاه</h2>{{ end }}
   </div>
 
   <div class="theme-grid glance-grid">
@@ -330,7 +341,7 @@
 <section class="section-block">
   <div class="section-header">
     <p class="eyebrow">{{ if $isFa }}مقاله‌ها{{ else }}Papers{{ end }}</p>
-    <h2>{{ if $isFa }}مقاله‌های اخیر{{ else }}Current Papers{{ end }}</h2>
+    {{ if $isFa }}<h2>مقاله‌های اخیر</h2>{{ end }}
   </div>
 
   <div class="home-paper-grid">
