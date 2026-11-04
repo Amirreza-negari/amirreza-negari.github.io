@@ -6,6 +6,14 @@ A selected list of papers and preprints.
 
 ## Publications
 
+### Long-range entangled criticality from coherent errors
+
+**Authors:** **Amir-Reza Negari**, Subhayan Sahu, Jan Behrends, Benjamin Béri, Timothy H. Hsieh
+
+**Year:** 2026
+
+**Links:** [arXiv](https://arxiv.org/abs/2611.03811)
+
 ### Instability of Markov chains under infinitesimal coherent dissipation
 
 **Authors:** **Amir-Reza Negari**, Yijian Zou, Timothy H. Hsieh

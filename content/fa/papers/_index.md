@@ -6,6 +6,14 @@ title: "مقالات"
 
 ## مقالات
 
+### Long-range entangled criticality from coherent errors
+
+**نویسندگان:** **Amir-Reza Negari**, Subhayan Sahu, Jan Behrends, Benjamin Béri, Timothy H. Hsieh
+
+**سال:** 2026
+
+**پیوندها:** [arXiv](https://arxiv.org/abs/2611.03811)
+
 ### Instability of Markov chains under infinitesimal coherent dissipation
 
 **نویسندگان:** **Amir-Reza Negari**, Yijian Zou, Timothy H. Hsieh
